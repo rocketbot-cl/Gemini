@@ -39,6 +39,14 @@ if cur_path not in sys.path:
 import google.generativeai as genai # type: ignore
 
 global mod_model_Gemini
+
+
+try:
+    if not mod_model_Gemini: #type:ignore
+        mod_model_Gemini = None
+except NameError:
+    mod_model_Gemini = None
+
 module = GetParams("module")
 
 try:
