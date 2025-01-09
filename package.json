@@ -205,9 +205,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "¿Qué es Rocketbot?",
-              "en": "What is Rocketbot?",
-              "pr": "O que é Rocketbot?"
+              "es": "¿Qué puedes ver en la imagen?",
+              "en": "What can you see in the image?",
+              "pr": "O que é você pode olhar na imagem?"
             },
             "description": {
               "es": "Texto que se utilizará como prompt para generar el contenido a partir de la imagen",
@@ -304,9 +304,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "¿Qué es Rocketbot?",
-              "en": "What is Rocketbot?",
-              "pr": "O que é Rocketbot?"
+              "es": "¿Qué lees en el archivo txt?",
+              "en": "What do you read in the txt file?",
+              "pr": "O que você lê no arquivo txt?"
             },
             "description": {
               "es": "Texto que se utilizará como prompt para generar el contenido",
@@ -402,9 +402,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "¿Qué es Rocketbot?",
-              "en": "What is Rocketbot?",
-              "pr": "O que é Rocketbot?"
+              "es": "¿Qué lees en el archivo pdf?",
+              "en": "What do you read in the pdf file?",
+              "pr": "O que você lê no arquivo pdf?"
             },
             "description": {
               "es": "Texto que se utilizará como prompt para generar el contenido",
@@ -501,9 +501,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "¿Qué es Rocketbot?",
-              "en": "What is Rocketbot?",
-              "pr": "O que é Rocketbot?"
+              "es": "¿Qué escuchar en el audio?",
+              "en": "What do you listen in the audio?",
+              "pr": "O que você ouve no áudio?"
             },
             "description": {
               "es": "Texto que se utilizará como prompt para generar el contenido",
