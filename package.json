@@ -1,0 +1,578 @@
+{
+
+  "author": "Nicolas Garcia - Pedro Herrera",
+  "description": "This module allows you to work with the Google Gemini AI API",
+  "description_lang":{
+    "en": "This module allows you to work with the Google Gemini AI API",
+    "es": "Este módulo te permite trabajar con la API de inteligencia artificial de Google Gemini",
+    "pr": "Este módulo permite trabalhar com a API de IA do Google Gemini"
+},
+  "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "http://rocketbot.com",
+  "linux": true,
+  "windows": true,
+  "mac": true,
+  "docker": true,
+  "name": "Gemini",
+  "dependencies": {},
+  "title": {
+    "en": "Gemini",
+    "es": "Gemini",
+    "pr": "Gemini"
+  },
+  "icon": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA3CAYAAABHGbl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAxIDc5LjE0NjI4OTk3NzcsIDIwMjMvMDYvMjUtMjM6NTc6MTQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNS4zIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOEJERjVBMENEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOEJERjVBMUNEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4QkRGNTlFQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4QkRGNTlGQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++bmeRwAABRBJREFUeNrcWUtoFEkYrpIchhw8iMiujBJEZImymBiz4wNB2fWw6OIhoh4EQXLRxahrYuaR+IhOz0RQPLiwiOvBFVQUFdSDigi6GJOJ5iFBJIhI8JBDDkEkyGD5/d096e6Z7kwy012Z6YI/Vd1dU1Vfff+rKoxJLJ2tPUFZc81hcssKfwLjbK7vgCXDPQtQLfQjY2Rfi/wIrBbyU2e4p9JvwGoEYz/IUsc5cuwrRYB+hlRBFvsGGJhaCpcIYfMg9X5Sxd+YpoZUdiFQV/gFWIMw2tWIZ9VlD0wJp3aqYPQIDYDEVhNYC5QtMCXci0yDbxe5nzYYYMsQGAD9gepX03OmkCM55G325lGJR3oDQPI/VwOzmJyI6/C4YBOoNrYkVneVDWOnI68CWH6Lnm1k7d9km2xMOdPaHSwnVQwBQCNhEHn7sf1loYqnIq+qMOgjsiNV7URmEk0dzW3tmwp9B+ROc6L+a0kydirymo4mipZpODoUu9IBqStJxjo0UFfAwGbzwFyISafBLZMKciCGM2FsFNVWSOpIov5bSTB2EqCwPAXNzTPaQ272l4w25h+8qZt1xk5E+2hjlmGQq0yIWrNLt7j3LDuz9LGyRm0KA7shD/5K/PJlthijAHxFTLp1V4I6hYELAHnibOvLgFTGjkX7iZ29aO4zAq5l121sKStAG4HanmXtG4K3OIP3Dw4lQxOeAWuPDiD3Ew340VHIEryqsC7QxqVnFi2ygRmgHYGpXcQY6mtonQO4YdeAxWKDpA7VmGwTOjdhzmCWTZgXwaZrZw7xLLePMeYE+vyH9m20u5qSa8YKAhaNvYGXEtvQYSPFGAxapTI0vUWwHPDFA8v0IQZTaD8jB4NXQwc61+aoKT/aNrQAHedjBKpxbBersPi1XL0us9V7Z5UTNjZkime5Kmobz7LmM2+Q+ff6GgQbZxpQSqZ7Ofs2jN+MmY/oFCBTkHckGC7EGV+PAQLGMgQzt4Xa4pZ8QkyhBo7f1CG4Q14y5fsBUkvIS8hHYhOSzmtj0djgPK4F3e06m0FHJ+CynTnY7heugbmF53uws7dFeUU4kEquXp+JRtQNmHOuHTCryhUdqM3A0lxj5hzq7oPJ0Ijrcaw9NhDEnG2YeBulQVPbhFM8s7ddGxuCJ2R9aDbjuetwMpT2NEAjnoFBsV7PEJZOz9hz2cwTz8i9d6K+iNRqZKZrLCpXRAZCiWszBvmT607GJTt7jucwsvzns3ZsOR7tp38yhLGqwxis0oV49pBO1Th0DhezLlfOYwCHsCG2cPXYAbtzVLm88exf2qSWxOrRkroawDHmAJ2gscBKg5FcYA4Hz4eod7coxYPy4jLnb/W+kLO0495xlsWlWm7i2TVQnlzmgLUAGLsMBnZO04EQmHWtSt2wm+tw/frt2OmVlJAi7rAnIv8lzijeN7oNyrN7xfb4Soo7ip1iWAHyO/jzuKyuuPVLnkuYYA9toI06juB5eVhZNV5ON8GZcgkyYsMWOZfzXoGSAawbcsPm+NIN2m4UffGD0GEnngNrj9cQM5dtLOCumclCAU31nTMJpSPy+j4m+l1373RX+GM0XjteCKBSUcVMuSX0ky3qp4WAKjUbM9saxSr6b8r1QtVvJqVCErAPmnDKId/KmFAKY23xms+oXmDP3+sgPWVLpipSGdJvkcZkTFYhEVgfpDoWr037RhX1QnHrk6zJpAGDnU3IUkPZjLFiso2Zlu8CDAC7ShwEfimwEgAAAABJRU5ErkJggg==",
+  "children": [
+    {
+      "en": {
+        "title": "Connect to Gemini",
+        "description": "Connect to the Google Gemini API",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Conectar a Gemini",
+        "description": "Conecta a la API de Google Gemini",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Conectar ao Gemini",
+        "description": "Conecte-se à API do Google Gemini",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "AIza....",
+              "en": "AIza....",
+              "pr": "AIza...."
+            },
+            "description": {
+              "es": "API Key",
+              "en": "API Key",
+              "pr": "Chave da API"
+            },
+            "title": {
+              "es": "API Key",
+              "en": "API Key",
+              "pr": "Chave da API"
+            },
+            "id": "api_key",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "result",
+              "en": "result",
+              "pr": "result"
+            },
+            "description": {
+              "es": "Variable donde se almacenará el resultado de la conexión",
+              "en": "Variable where the connection result will be stored",
+              "pr": "Variável onde o resultado da conexão será armazenado"
+            },
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable",
+              "pr": "Atribuir resultado à variável"
+            },
+            "remove_vars": true,
+            "id": "result",
+            "css": "col-md-6"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA3CAYAAABHGbl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAxIDc5LjE0NjI4OTk3NzcsIDIwMjMvMDYvMjUtMjM6NTc6MTQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNS4zIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOEJERjVBMENEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOEJERjVBMUNEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4QkRGNTlFQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4QkRGNTlGQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++bmeRwAABRBJREFUeNrcWUtoFEkYrpIchhw8iMiujBJEZImymBiz4wNB2fWw6OIhoh4EQXLRxahrYuaR+IhOz0RQPLiwiOvBFVQUFdSDigi6GJOJ5iFBJIhI8JBDDkEkyGD5/d096e6Z7kwy012Z6YI/Vd1dU1Vfff+rKoxJLJ2tPUFZc81hcssKfwLjbK7vgCXDPQtQLfQjY2Rfi/wIrBbyU2e4p9JvwGoEYz/IUsc5cuwrRYB+hlRBFvsGGJhaCpcIYfMg9X5Sxd+YpoZUdiFQV/gFWIMw2tWIZ9VlD0wJp3aqYPQIDYDEVhNYC5QtMCXci0yDbxe5nzYYYMsQGAD9gepX03OmkCM55G325lGJR3oDQPI/VwOzmJyI6/C4YBOoNrYkVneVDWOnI68CWH6Lnm1k7d9km2xMOdPaHSwnVQwBQCNhEHn7sf1loYqnIq+qMOgjsiNV7URmEk0dzW3tmwp9B+ROc6L+a0kydirymo4mipZpODoUu9IBqStJxjo0UFfAwGbzwFyISafBLZMKciCGM2FsFNVWSOpIov5bSTB2EqCwPAXNzTPaQ272l4w25h+8qZt1xk5E+2hjlmGQq0yIWrNLt7j3LDuz9LGyRm0KA7shD/5K/PJlthijAHxFTLp1V4I6hYELAHnibOvLgFTGjkX7iZ29aO4zAq5l121sKStAG4HanmXtG4K3OIP3Dw4lQxOeAWuPDiD3Ew340VHIEryqsC7QxqVnFi2ygRmgHYGpXcQY6mtonQO4YdeAxWKDpA7VmGwTOjdhzmCWTZgXwaZrZw7xLLePMeYE+vyH9m20u5qSa8YKAhaNvYGXEtvQYSPFGAxapTI0vUWwHPDFA8v0IQZTaD8jB4NXQwc61+aoKT/aNrQAHedjBKpxbBersPi1XL0us9V7Z5UTNjZkime5Kmobz7LmM2+Q+ff6GgQbZxpQSqZ7Ofs2jN+MmY/oFCBTkHckGC7EGV+PAQLGMgQzt4Xa4pZ8QkyhBo7f1CG4Q14y5fsBUkvIS8hHYhOSzmtj0djgPK4F3e06m0FHJ+CynTnY7heugbmF53uws7dFeUU4kEquXp+JRtQNmHOuHTCryhUdqM3A0lxj5hzq7oPJ0Ijrcaw9NhDEnG2YeBulQVPbhFM8s7ddGxuCJ2R9aDbjuetwMpT2NEAjnoFBsV7PEJZOz9hz2cwTz8i9d6K+iNRqZKZrLCpXRAZCiWszBvmT607GJTt7jucwsvzns3ZsOR7tp38yhLGqwxis0oV49pBO1Th0DhezLlfOYwCHsCG2cPXYAbtzVLm88exf2qSWxOrRkroawDHmAJ2gscBKg5FcYA4Hz4eod7coxYPy4jLnb/W+kLO0495xlsWlWm7i2TVQnlzmgLUAGLsMBnZO04EQmHWtSt2wm+tw/frt2OmVlJAi7rAnIv8lzijeN7oNyrN7xfb4Soo7ip1iWAHyO/jzuKyuuPVLnkuYYA9toI06juB5eVhZNV5ON8GZcgkyYsMWOZfzXoGSAawbcsPm+NIN2m4UffGD0GEnngNrj9cQM5dtLOCumclCAU31nTMJpSPy+j4m+l1373RX+GM0XjteCKBSUcVMuSX0ky3qp4WAKjUbM9saxSr6b8r1QtVvJqVCErAPmnDKId/KmFAKY23xms+oXmDP3+sgPWVLpipSGdJvkcZkTFYhEVgfpDoWr037RhX1QnHrk6zJpAGDnU3IUkPZjLFiso2Zlu8CDAC7ShwEfimwEgAAAABJRU5ErkJggg==",
+      "module": "connect",
+      "module_name": "Gemini",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "en": {
+        "title": "Generate Content",
+        "description": "Generate content by providing a prompt of the information you want",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Generar Contenido",
+        "description": "Genera contenido proporcionando un prompt de la información que deseas",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Gerar Conteúdo",
+        "description": "Gere conteúdo fornecendo um prompt das informações que deseja",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "textarea",
+            "placeholder": {
+              "es": "¿Qué es Rocketbot?",
+              "en": "What is Rocketbot?",
+              "pr": "O que é Rocketbot?"
+            },
+            "description": {
+              "es": "Texto que se utilizará como prompt para generar el contenido",
+              "en": "Text that will be used as a prompt to generate the content",
+              "pr": "Texto que será usado como prompt para gerar o conteúdo"
+            },
+            "title": {
+              "es": "Prompt",
+              "en": "Prompt",
+              "pr": "Prompt"
+            },
+            "id": "prompt",
+            "css": "col-md-12"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "result",
+              "en": "result",
+              "pr": "result"
+            },
+            "description": {
+              "es": "Variable donde se almacenará el resultado de la ejecución",
+              "en": "Variable where the execution result will be stored",
+              "pr": "Variável onde o resultado da execução será armazenado"
+            },
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable",
+              "pr": "Atribuir resultado à variável"
+            },
+            "remove_vars": true,
+            "id": "result",
+            "css": "col-md-12"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA3CAYAAABHGbl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAxIDc5LjE0NjI4OTk3NzcsIDIwMjMvMDYvMjUtMjM6NTc6MTQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNS4zIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOEJERjVBMENEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOEJERjVBMUNEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4QkRGNTlFQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4QkRGNTlGQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++bmeRwAABRBJREFUeNrcWUtoFEkYrpIchhw8iMiujBJEZImymBiz4wNB2fWw6OIhoh4EQXLRxahrYuaR+IhOz0RQPLiwiOvBFVQUFdSDigi6GJOJ5iFBJIhI8JBDDkEkyGD5/d096e6Z7kwy012Z6YI/Vd1dU1Vfff+rKoxJLJ2tPUFZc81hcssKfwLjbK7vgCXDPQtQLfQjY2Rfi/wIrBbyU2e4p9JvwGoEYz/IUsc5cuwrRYB+hlRBFvsGGJhaCpcIYfMg9X5Sxd+YpoZUdiFQV/gFWIMw2tWIZ9VlD0wJp3aqYPQIDYDEVhNYC5QtMCXci0yDbxe5nzYYYMsQGAD9gepX03OmkCM55G325lGJR3oDQPI/VwOzmJyI6/C4YBOoNrYkVneVDWOnI68CWH6Lnm1k7d9km2xMOdPaHSwnVQwBQCNhEHn7sf1loYqnIq+qMOgjsiNV7URmEk0dzW3tmwp9B+ROc6L+a0kydirymo4mipZpODoUu9IBqStJxjo0UFfAwGbzwFyISafBLZMKciCGM2FsFNVWSOpIov5bSTB2EqCwPAXNzTPaQ272l4w25h+8qZt1xk5E+2hjlmGQq0yIWrNLt7j3LDuz9LGyRm0KA7shD/5K/PJlthijAHxFTLp1V4I6hYELAHnibOvLgFTGjkX7iZ29aO4zAq5l121sKStAG4HanmXtG4K3OIP3Dw4lQxOeAWuPDiD3Ew340VHIEryqsC7QxqVnFi2ygRmgHYGpXcQY6mtonQO4YdeAxWKDpA7VmGwTOjdhzmCWTZgXwaZrZw7xLLePMeYE+vyH9m20u5qSa8YKAhaNvYGXEtvQYSPFGAxapTI0vUWwHPDFA8v0IQZTaD8jB4NXQwc61+aoKT/aNrQAHedjBKpxbBersPi1XL0us9V7Z5UTNjZkime5Kmobz7LmM2+Q+ff6GgQbZxpQSqZ7Ofs2jN+MmY/oFCBTkHckGC7EGV+PAQLGMgQzt4Xa4pZ8QkyhBo7f1CG4Q14y5fsBUkvIS8hHYhOSzmtj0djgPK4F3e06m0FHJ+CynTnY7heugbmF53uws7dFeUU4kEquXp+JRtQNmHOuHTCryhUdqM3A0lxj5hzq7oPJ0Ijrcaw9NhDEnG2YeBulQVPbhFM8s7ddGxuCJ2R9aDbjuetwMpT2NEAjnoFBsV7PEJZOz9hz2cwTz8i9d6K+iNRqZKZrLCpXRAZCiWszBvmT607GJTt7jucwsvzns3ZsOR7tp38yhLGqwxis0oV49pBO1Th0DhezLlfOYwCHsCG2cPXYAbtzVLm88exf2qSWxOrRkroawDHmAJ2gscBKg5FcYA4Hz4eod7coxYPy4jLnb/W+kLO0495xlsWlWm7i2TVQnlzmgLUAGLsMBnZO04EQmHWtSt2wm+tw/frt2OmVlJAi7rAnIv8lzijeN7oNyrN7xfb4Soo7ip1iWAHyO/jzuKyuuPVLnkuYYA9toI06juB5eVhZNV5ON8GZcgkyYsMWOZfzXoGSAawbcsPm+NIN2m4UffGD0GEnngNrj9cQM5dtLOCumclCAU31nTMJpSPy+j4m+l1373RX+GM0XjteCKBSUcVMuSX0ky3qp4WAKjUbM9saxSr6b8r1QtVvJqVCErAPmnDKId/KmFAKY23xms+oXmDP3+sgPWVLpipSGdJvkcZkTFYhEVgfpDoWr037RhX1QnHrk6zJpAGDnU3IUkPZjLFiso2Zlu8CDAC7ShwEfimwEgAAAABJRU5ErkJggg==",
+      "module": "generate_content",
+      "module_name": "Gemini",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "en": {
+        "title": "Read Image",
+        "description": "Generate content by providing a prompt with a file route you want",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Leer Imagen",
+        "description": "Genera contenido proporcionando una imagen de la ruta de archivo que desees",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Ler Imagem",
+        "description": "Gere conteúdo fornecendo um prompt com uma rota de arquivo que você deseja",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "textarea",
+            "placeholder": {
+              "es": "¿Qué puedes ver en la imagen?",
+              "en": "What can you see in the image?",
+              "pr": "O que é você pode olhar na imagem?"
+            },
+            "description": {
+              "es": "Texto que se utilizará como prompt para generar el contenido a partir de la imagen",
+              "en": "Text that will be used as a prompt to generate the content from the image",
+              "pr": "Texto que será usado como prompt para gerar o conteúdo desde à imagem"
+            },
+            "title": {
+              "es": "Prompt",
+              "en": "Prompt",
+              "pr": "Prompt"
+            },
+            "id": "prompt",
+            "css": "col-md-12"
+          },
+          {
+            "type": "file_select",
+            "placeholder": {
+              "es": "Selecciona un archivo",
+              "en": "Select a file",
+              "pr": "Selecione um arquivo"
+            },
+            "description": {
+              "es": "Archivo que se utilizará como prompt para generar el contenido",
+              "en": "File that will be used as a prompt to generate the content",
+              "pr": "Arquivo que será usado como prompt para gerar o conteúdo"
+            },
+            "title": {
+              "es": "Imagen",
+              "en": "Image",
+              "pr": "Imagem"
+            },
+            "id": "image",
+            "css": "col-md-12",
+            "extensions": "png, jpeg, webp, heic, heif"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "result",
+              "en": "result",
+              "pr": "result"
+            },
+            "description": {
+              "es": "Variable donde se almacenará el resultado de la ejecución",
+              "en": "Variable where the execution result will be stored",
+              "pr": "Variável onde o resultado da execução será armazenado"
+            },
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable",
+              "pr": "Atribuir resultado à variável"
+            },
+            "remove_vars": true,
+            "id": "result",
+            "css": "col-md-12"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA3CAYAAABHGbl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAxIDc5LjE0NjI4OTk3NzcsIDIwMjMvMDYvMjUtMjM6NTc6MTQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNS4zIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOEJERjVBMENEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOEJERjVBMUNEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4QkRGNTlFQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4QkRGNTlGQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++bmeRwAABRBJREFUeNrcWUtoFEkYrpIchhw8iMiujBJEZImymBiz4wNB2fWw6OIhoh4EQXLRxahrYuaR+IhOz0RQPLiwiOvBFVQUFdSDigi6GJOJ5iFBJIhI8JBDDkEkyGD5/d096e6Z7kwy012Z6YI/Vd1dU1Vfff+rKoxJLJ2tPUFZc81hcssKfwLjbK7vgCXDPQtQLfQjY2Rfi/wIrBbyU2e4p9JvwGoEYz/IUsc5cuwrRYB+hlRBFvsGGJhaCpcIYfMg9X5Sxd+YpoZUdiFQV/gFWIMw2tWIZ9VlD0wJp3aqYPQIDYDEVhNYC5QtMCXci0yDbxe5nzYYYMsQGAD9gepX03OmkCM55G325lGJR3oDQPI/VwOzmJyI6/C4YBOoNrYkVneVDWOnI68CWH6Lnm1k7d9km2xMOdPaHSwnVQwBQCNhEHn7sf1loYqnIq+qMOgjsiNV7URmEk0dzW3tmwp9B+ROc6L+a0kydirymo4mipZpODoUu9IBqStJxjo0UFfAwGbzwFyISafBLZMKciCGM2FsFNVWSOpIov5bSTB2EqCwPAXNzTPaQ272l4w25h+8qZt1xk5E+2hjlmGQq0yIWrNLt7j3LDuz9LGyRm0KA7shD/5K/PJlthijAHxFTLp1V4I6hYELAHnibOvLgFTGjkX7iZ29aO4zAq5l121sKStAG4HanmXtG4K3OIP3Dw4lQxOeAWuPDiD3Ew340VHIEryqsC7QxqVnFi2ygRmgHYGpXcQY6mtonQO4YdeAxWKDpA7VmGwTOjdhzmCWTZgXwaZrZw7xLLePMeYE+vyH9m20u5qSa8YKAhaNvYGXEtvQYSPFGAxapTI0vUWwHPDFA8v0IQZTaD8jB4NXQwc61+aoKT/aNrQAHedjBKpxbBersPi1XL0us9V7Z5UTNjZkime5Kmobz7LmM2+Q+ff6GgQbZxpQSqZ7Ofs2jN+MmY/oFCBTkHckGC7EGV+PAQLGMgQzt4Xa4pZ8QkyhBo7f1CG4Q14y5fsBUkvIS8hHYhOSzmtj0djgPK4F3e06m0FHJ+CynTnY7heugbmF53uws7dFeUU4kEquXp+JRtQNmHOuHTCryhUdqM3A0lxj5hzq7oPJ0Ijrcaw9NhDEnG2YeBulQVPbhFM8s7ddGxuCJ2R9aDbjuetwMpT2NEAjnoFBsV7PEJZOz9hz2cwTz8i9d6K+iNRqZKZrLCpXRAZCiWszBvmT607GJTt7jucwsvzns3ZsOR7tp38yhLGqwxis0oV49pBO1Th0DhezLlfOYwCHsCG2cPXYAbtzVLm88exf2qSWxOrRkroawDHmAJ2gscBKg5FcYA4Hz4eod7coxYPy4jLnb/W+kLO0495xlsWlWm7i2TVQnlzmgLUAGLsMBnZO04EQmHWtSt2wm+tw/frt2OmVlJAi7rAnIv8lzijeN7oNyrN7xfb4Soo7ip1iWAHyO/jzuKyuuPVLnkuYYA9toI06juB5eVhZNV5ON8GZcgkyYsMWOZfzXoGSAawbcsPm+NIN2m4UffGD0GEnngNrj9cQM5dtLOCumclCAU31nTMJpSPy+j4m+l1373RX+GM0XjteCKBSUcVMuSX0ky3qp4WAKjUbM9saxSr6b8r1QtVvJqVCErAPmnDKId/KmFAKY23xms+oXmDP3+sgPWVLpipSGdJvkcZkTFYhEVgfpDoWr037RhX1QnHrk6zJpAGDnU3IUkPZjLFiso2Zlu8CDAC7ShwEfimwEgAAAABJRU5ErkJggg==",
+      "module": "generate_content_from_image",
+      "module_name": "Gemini",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "en": {
+        "title": "Generate Content From txt",
+        "description": "Generate content by providing a .txt file of the information you want",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Generar Contenido Desde txt",
+        "description": "Genera contenido proporcionando un archivo .txt de la información que deseas",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Gerar Conteúdo Desde txt",
+        "description": "Gere conteúdo fornecendo um arquivo .txt das informações que deseja",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "textarea",
+            "placeholder": {
+              "es": "¿Qué lees en el archivo txt?",
+              "en": "What do you read in the txt file?",
+              "pr": "O que você lê no arquivo txt?"
+            },
+            "description": {
+              "es": "Texto que se utilizará como prompt para generar el contenido",
+              "en": "Text that will be used as a prompt to generate the content",
+              "pr": "Texto que será usado como prompt para gerar o conteúdo"
+            },
+            "title": {
+              "es": "Prompt",
+              "en": "Prompt",
+              "pr": "Prompt"
+            },
+            "id": "prompt",
+            "css": "col-md-12"
+          },
+          {
+            "type": "file_select",
+            "placeholder": {
+              "es": "Selecciona un archivo",
+              "en": "Select a file",
+              "pr": "Selecione um arquivo"
+            },
+            "description": {
+              "es": "Archivo que se utilizará como prompt para generar el contenido",
+              "en": "File that will be used as a prompt to generate the content",
+              "pr": "Arquivo que será usado como prompt para gerar o conteúdo"
+            },
+            "title": {
+              "es": "Archivo",
+              "en": "File",
+              "pr": "Arquivo"
+            },
+            "id": "file",
+            "css": "col-md-12"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "result",
+              "en": "result",
+              "pr": "result"
+            },
+            "description": {
+              "es": "Variable donde se almacenará el resultado de la ejecución",
+              "en": "Variable where the execution result will be stored",
+              "pr": "Variável onde o resultado da execução será armazenado"
+            },
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable",
+              "pr": "Atribuir resultado à variável"
+            },
+            "remove_vars": true,
+            "id": "result",
+            "css": "col-md-12"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA3CAYAAABHGbl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAxIDc5LjE0NjI4OTk3NzcsIDIwMjMvMDYvMjUtMjM6NTc6MTQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNS4zIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOEJERjVBMENEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOEJERjVBMUNEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4QkRGNTlFQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4QkRGNTlGQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++bmeRwAABRBJREFUeNrcWUtoFEkYrpIchhw8iMiujBJEZImymBiz4wNB2fWw6OIhoh4EQXLRxahrYuaR+IhOz0RQPLiwiOvBFVQUFdSDigi6GJOJ5iFBJIhI8JBDDkEkyGD5/d096e6Z7kwy012Z6YI/Vd1dU1Vfff+rKoxJLJ2tPUFZc81hcssKfwLjbK7vgCXDPQtQLfQjY2Rfi/wIrBbyU2e4p9JvwGoEYz/IUsc5cuwrRYB+hlRBFvsGGJhaCpcIYfMg9X5Sxd+YpoZUdiFQV/gFWIMw2tWIZ9VlD0wJp3aqYPQIDYDEVhNYC5QtMCXci0yDbxe5nzYYYMsQGAD9gepX03OmkCM55G325lGJR3oDQPI/VwOzmJyI6/C4YBOoNrYkVneVDWOnI68CWH6Lnm1k7d9km2xMOdPaHSwnVQwBQCNhEHn7sf1loYqnIq+qMOgjsiNV7URmEk0dzW3tmwp9B+ROc6L+a0kydirymo4mipZpODoUu9IBqStJxjo0UFfAwGbzwFyISafBLZMKciCGM2FsFNVWSOpIov5bSTB2EqCwPAXNzTPaQ272l4w25h+8qZt1xk5E+2hjlmGQq0yIWrNLt7j3LDuz9LGyRm0KA7shD/5K/PJlthijAHxFTLp1V4I6hYELAHnibOvLgFTGjkX7iZ29aO4zAq5l121sKStAG4HanmXtG4K3OIP3Dw4lQxOeAWuPDiD3Ew340VHIEryqsC7QxqVnFi2ygRmgHYGpXcQY6mtonQO4YdeAxWKDpA7VmGwTOjdhzmCWTZgXwaZrZw7xLLePMeYE+vyH9m20u5qSa8YKAhaNvYGXEtvQYSPFGAxapTI0vUWwHPDFA8v0IQZTaD8jB4NXQwc61+aoKT/aNrQAHedjBKpxbBersPi1XL0us9V7Z5UTNjZkime5Kmobz7LmM2+Q+ff6GgQbZxpQSqZ7Ofs2jN+MmY/oFCBTkHckGC7EGV+PAQLGMgQzt4Xa4pZ8QkyhBo7f1CG4Q14y5fsBUkvIS8hHYhOSzmtj0djgPK4F3e06m0FHJ+CynTnY7heugbmF53uws7dFeUU4kEquXp+JRtQNmHOuHTCryhUdqM3A0lxj5hzq7oPJ0Ijrcaw9NhDEnG2YeBulQVPbhFM8s7ddGxuCJ2R9aDbjuetwMpT2NEAjnoFBsV7PEJZOz9hz2cwTz8i9d6K+iNRqZKZrLCpXRAZCiWszBvmT607GJTt7jucwsvzns3ZsOR7tp38yhLGqwxis0oV49pBO1Th0DhezLlfOYwCHsCG2cPXYAbtzVLm88exf2qSWxOrRkroawDHmAJ2gscBKg5FcYA4Hz4eod7coxYPy4jLnb/W+kLO0495xlsWlWm7i2TVQnlzmgLUAGLsMBnZO04EQmHWtSt2wm+tw/frt2OmVlJAi7rAnIv8lzijeN7oNyrN7xfb4Soo7ip1iWAHyO/jzuKyuuPVLnkuYYA9toI06juB5eVhZNV5ON8GZcgkyYsMWOZfzXoGSAawbcsPm+NIN2m4UffGD0GEnngNrj9cQM5dtLOCumclCAU31nTMJpSPy+j4m+l1373RX+GM0XjteCKBSUcVMuSX0ky3qp4WAKjUbM9saxSr6b8r1QtVvJqVCErAPmnDKId/KmFAKY23xms+oXmDP3+sgPWVLpipSGdJvkcZkTFYhEVgfpDoWr037RhX1QnHrk6zJpAGDnU3IUkPZjLFiso2Zlu8CDAC7ShwEfimwEgAAAABJRU5ErkJggg==",
+      "module": "generate_content_from_txt",
+      "module_name": "Gemini",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "en": {
+        "title": "Generate Content From pdf",
+        "description": "Generate content by providing a .pdf file of the information you want",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Generar Contenido Desde pdf",
+        "description": "Genera contenido proporcionando un archivo .pdf de la información que deseas",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Gerar Conteúdo Desde pdf",
+        "description": "Gere conteúdo fornecendo um arquivo .pdf das informações que deseja",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "textarea",
+            "placeholder": {
+              "es": "¿Qué lees en el archivo pdf?",
+              "en": "What do you read in the pdf file?",
+              "pr": "O que você lê no arquivo pdf?"
+            },
+            "description": {
+              "es": "Texto que se utilizará como prompt para generar el contenido",
+              "en": "Text that will be used as a prompt to generate the content",
+              "pr": "Texto que será usado como prompt para gerar o conteúdo"
+            },
+            "title": {
+              "es": "Prompt",
+              "en": "Prompt",
+              "pr": "Prompt"
+            },
+            "id": "prompt",
+            "css": "col-md-12"
+          },
+          {
+            "type": "file_select",
+            "placeholder": {
+              "es": "Selecciona un archivo",
+              "en": "Select a file",
+              "pr": "Selecione um arquivo"
+            },
+            "description": {
+              "es": "Archivo que se utilizará como prompt para generar el contenido",
+              "en": "File that will be used as a prompt to generate the content",
+              "pr": "Arquivo que será usado como prompt para gerar o conteúdo"
+            },
+            "title": {
+              "es": "Archivo",
+              "en": "File",
+              "pr": "Arquivo"
+            },
+            "id": "file",
+            "css": "col-md-12",
+            "extensions": "pdf"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "result",
+              "en": "result",
+              "pr": "result"
+            },
+            "description": {
+              "es": "Variable donde se almacenará el resultado de la ejecución",
+              "en": "Variable where the execution result will be stored",
+              "pr": "Variável onde o resultado da execução será armazenado"
+            },
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable",
+              "pr": "Atribuir resultado à variável"
+            },
+            "remove_vars": true,
+            "id": "result",
+            "css": "col-md-12"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA3CAYAAABHGbl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAxIDc5LjE0NjI4OTk3NzcsIDIwMjMvMDYvMjUtMjM6NTc6MTQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNS4zIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOEJERjVBMENEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOEJERjVBMUNEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4QkRGNTlFQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4QkRGNTlGQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++bmeRwAABRBJREFUeNrcWUtoFEkYrpIchhw8iMiujBJEZImymBiz4wNB2fWw6OIhoh4EQXLRxahrYuaR+IhOz0RQPLiwiOvBFVQUFdSDigi6GJOJ5iFBJIhI8JBDDkEkyGD5/d096e6Z7kwy012Z6YI/Vd1dU1Vfff+rKoxJLJ2tPUFZc81hcssKfwLjbK7vgCXDPQtQLfQjY2Rfi/wIrBbyU2e4p9JvwGoEYz/IUsc5cuwrRYB+hlRBFvsGGJhaCpcIYfMg9X5Sxd+YpoZUdiFQV/gFWIMw2tWIZ9VlD0wJp3aqYPQIDYDEVhNYC5QtMCXci0yDbxe5nzYYYMsQGAD9gepX03OmkCM55G325lGJR3oDQPI/VwOzmJyI6/C4YBOoNrYkVneVDWOnI68CWH6Lnm1k7d9km2xMOdPaHSwnVQwBQCNhEHn7sf1loYqnIq+qMOgjsiNV7URmEk0dzW3tmwp9B+ROc6L+a0kydirymo4mipZpODoUu9IBqStJxjo0UFfAwGbzwFyISafBLZMKciCGM2FsFNVWSOpIov5bSTB2EqCwPAXNzTPaQ272l4w25h+8qZt1xk5E+2hjlmGQq0yIWrNLt7j3LDuz9LGyRm0KA7shD/5K/PJlthijAHxFTLp1V4I6hYELAHnibOvLgFTGjkX7iZ29aO4zAq5l121sKStAG4HanmXtG4K3OIP3Dw4lQxOeAWuPDiD3Ew340VHIEryqsC7QxqVnFi2ygRmgHYGpXcQY6mtonQO4YdeAxWKDpA7VmGwTOjdhzmCWTZgXwaZrZw7xLLePMeYE+vyH9m20u5qSa8YKAhaNvYGXEtvQYSPFGAxapTI0vUWwHPDFA8v0IQZTaD8jB4NXQwc61+aoKT/aNrQAHedjBKpxbBersPi1XL0us9V7Z5UTNjZkime5Kmobz7LmM2+Q+ff6GgQbZxpQSqZ7Ofs2jN+MmY/oFCBTkHckGC7EGV+PAQLGMgQzt4Xa4pZ8QkyhBo7f1CG4Q14y5fsBUkvIS8hHYhOSzmtj0djgPK4F3e06m0FHJ+CynTnY7heugbmF53uws7dFeUU4kEquXp+JRtQNmHOuHTCryhUdqM3A0lxj5hzq7oPJ0Ijrcaw9NhDEnG2YeBulQVPbhFM8s7ddGxuCJ2R9aDbjuetwMpT2NEAjnoFBsV7PEJZOz9hz2cwTz8i9d6K+iNRqZKZrLCpXRAZCiWszBvmT607GJTt7jucwsvzns3ZsOR7tp38yhLGqwxis0oV49pBO1Th0DhezLlfOYwCHsCG2cPXYAbtzVLm88exf2qSWxOrRkroawDHmAJ2gscBKg5FcYA4Hz4eod7coxYPy4jLnb/W+kLO0495xlsWlWm7i2TVQnlzmgLUAGLsMBnZO04EQmHWtSt2wm+tw/frt2OmVlJAi7rAnIv8lzijeN7oNyrN7xfb4Soo7ip1iWAHyO/jzuKyuuPVLnkuYYA9toI06juB5eVhZNV5ON8GZcgkyYsMWOZfzXoGSAawbcsPm+NIN2m4UffGD0GEnngNrj9cQM5dtLOCumclCAU31nTMJpSPy+j4m+l1373RX+GM0XjteCKBSUcVMuSX0ky3qp4WAKjUbM9saxSr6b8r1QtVvJqVCErAPmnDKId/KmFAKY23xms+oXmDP3+sgPWVLpipSGdJvkcZkTFYhEVgfpDoWr037RhX1QnHrk6zJpAGDnU3IUkPZjLFiso2Zlu8CDAC7ShwEfimwEgAAAABJRU5ErkJggg==",
+      "module": "generate_content_from_pdf",
+      "module_name": "Gemini",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "en": {
+        "title": "Generate Content From Audio",
+        "description": "Generate content by providing an audio file of the information you want",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Generar Contenido Desde Audio",
+        "description": "Genera contenido proporcionando un archivo de audio de la información que deseas",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Gerar Conteúdo Desde Audio",
+        "description": "Gere conteúdo fornecendo um arquivo de audio das informações que deseja",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "textarea",
+            "placeholder": {
+              "es": "¿Qué escuchar en el audio?",
+              "en": "What do you listen in the audio?",
+              "pr": "O que você ouve no áudio?"
+            },
+            "description": {
+              "es": "Texto que se utilizará como prompt para generar el contenido",
+              "en": "Text that will be used as a prompt to generate the content",
+              "pr": "Texto que será usado como prompt para gerar o conteúdo"
+            },
+            "title": {
+              "es": "Prompt",
+              "en": "Prompt",
+              "pr": "Prompt"
+            },
+            "id": "prompt",
+            "css": "col-md-12"
+          },
+          {
+            "type": "file_select",
+            "placeholder": {
+              "es": "Selecciona un archivo",
+              "en": "Select a file",
+              "pr": "Selecione um arquivo"
+            },
+            "description": {
+              "es": "Archivo que se utilizará como prompt para generar el contenido",
+              "en": "File that will be used as a prompt to generate the content",
+              "pr": "Arquivo que será usado como prompt para gerar o conteúdo"
+            },
+            "title": {
+              "es": "Archivo",
+              "en": "File",
+              "pr": "Arquivo"
+            },
+            "id": "file",
+            "css": "col-md-12"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "result",
+              "en": "result",
+              "pr": "result"
+            },
+            "description": {
+              "es": "Variable donde se almacenará el resultado de la ejecución",
+              "en": "Variable where the execution result will be stored",
+              "pr": "Variável onde o resultado da execução será armazenado"
+            },
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable",
+              "pr": "Atribuir resultado à variável"
+            },
+            "remove_vars": true,
+            "id": "result",
+            "css": "col-md-12"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA3CAYAAABHGbl4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAxIDc5LjE0NjI4OTk3NzcsIDIwMjMvMDYvMjUtMjM6NTc6MTQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyNS4zIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxOEJERjVBMENEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxOEJERjVBMUNEQzgxMUVGQUVEQ0M0MTg5RTczQTJBRSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjE4QkRGNTlFQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjE4QkRGNTlGQ0RDODExRUZBRURDQzQxODlFNzNBMkFFIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++bmeRwAABRBJREFUeNrcWUtoFEkYrpIchhw8iMiujBJEZImymBiz4wNB2fWw6OIhoh4EQXLRxahrYuaR+IhOz0RQPLiwiOvBFVQUFdSDigi6GJOJ5iFBJIhI8JBDDkEkyGD5/d096e6Z7kwy012Z6YI/Vd1dU1Vfff+rKoxJLJ2tPUFZc81hcssKfwLjbK7vgCXDPQtQLfQjY2Rfi/wIrBbyU2e4p9JvwGoEYz/IUsc5cuwrRYB+hlRBFvsGGJhaCpcIYfMg9X5Sxd+YpoZUdiFQV/gFWIMw2tWIZ9VlD0wJp3aqYPQIDYDEVhNYC5QtMCXci0yDbxe5nzYYYMsQGAD9gepX03OmkCM55G325lGJR3oDQPI/VwOzmJyI6/C4YBOoNrYkVneVDWOnI68CWH6Lnm1k7d9km2xMOdPaHSwnVQwBQCNhEHn7sf1loYqnIq+qMOgjsiNV7URmEk0dzW3tmwp9B+ROc6L+a0kydirymo4mipZpODoUu9IBqStJxjo0UFfAwGbzwFyISafBLZMKciCGM2FsFNVWSOpIov5bSTB2EqCwPAXNzTPaQ272l4w25h+8qZt1xk5E+2hjlmGQq0yIWrNLt7j3LDuz9LGyRm0KA7shD/5K/PJlthijAHxFTLp1V4I6hYELAHnibOvLgFTGjkX7iZ29aO4zAq5l121sKStAG4HanmXtG4K3OIP3Dw4lQxOeAWuPDiD3Ew340VHIEryqsC7QxqVnFi2ygRmgHYGpXcQY6mtonQO4YdeAxWKDpA7VmGwTOjdhzmCWTZgXwaZrZw7xLLePMeYE+vyH9m20u5qSa8YKAhaNvYGXEtvQYSPFGAxapTI0vUWwHPDFA8v0IQZTaD8jB4NXQwc61+aoKT/aNrQAHedjBKpxbBersPi1XL0us9V7Z5UTNjZkime5Kmobz7LmM2+Q+ff6GgQbZxpQSqZ7Ofs2jN+MmY/oFCBTkHckGC7EGV+PAQLGMgQzt4Xa4pZ8QkyhBo7f1CG4Q14y5fsBUkvIS8hHYhOSzmtj0djgPK4F3e06m0FHJ+CynTnY7heugbmF53uws7dFeUU4kEquXp+JRtQNmHOuHTCryhUdqM3A0lxj5hzq7oPJ0Ijrcaw9NhDEnG2YeBulQVPbhFM8s7ddGxuCJ2R9aDbjuetwMpT2NEAjnoFBsV7PEJZOz9hz2cwTz8i9d6K+iNRqZKZrLCpXRAZCiWszBvmT607GJTt7jucwsvzns3ZsOR7tp38yhLGqwxis0oV49pBO1Th0DhezLlfOYwCHsCG2cPXYAbtzVLm88exf2qSWxOrRkroawDHmAJ2gscBKg5FcYA4Hz4eod7coxYPy4jLnb/W+kLO0495xlsWlWm7i2TVQnlzmgLUAGLsMBnZO04EQmHWtSt2wm+tw/frt2OmVlJAi7rAnIv8lzijeN7oNyrN7xfb4Soo7ip1iWAHyO/jzuKyuuPVLnkuYYA9toI06juB5eVhZNV5ON8GZcgkyYsMWOZfzXoGSAawbcsPm+NIN2m4UffGD0GEnngNrj9cQM5dtLOCumclCAU31nTMJpSPy+j4m+l1373RX+GM0XjteCKBSUcVMuSX0ky3qp4WAKjUbM9saxSr6b8r1QtVvJqVCErAPmnDKId/KmFAKY23xms+oXmDP3+sgPWVLpipSGdJvkcZkTFYhEVgfpDoWr037RhX1QnHrk6zJpAGDnU3IUkPZjLFiso2Zlu8CDAC7ShwEfimwEgAAAABJRU5ErkJggg==",
+      "module": "generate_content_from_audio",
+      "module_name": "Gemini",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": true,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    }
+  ]
+}
