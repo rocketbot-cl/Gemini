@@ -1,3 +1,7 @@
+
+
+
+
 # Gemini
   
 Este módulo te permite trabajar con la API de inteligencia artificial de Google Gemini  
@@ -18,7 +22,19 @@ Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
 Conecta a la API de Google Gemini
 
 2. Generar Contenido  
-Genera contenido proporcionando un prompt de la información que deseas  
+Genera contenido proporcionando un prompt de la información que deseas
+
+3. Leer Imagen  
+Genera contenido proporcionando una imagen de la ruta de archivo que desees
+
+4. Generar Contenido Desde txt  
+Genera contenido proporcionando un archivo .txt de la información que deseas
+
+5. Generar Contenido Desde pdf  
+Genera contenido proporcionando un archivo .pdf de la información que deseas
+
+6. Generar Contenido Desde Audio  
+Genera contenido proporcionando un archivo de audio de la información que deseas  
 
 
 
