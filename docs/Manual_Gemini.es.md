@@ -8,7 +8,7 @@ Este módulo te permite trabajar con la API de inteligencia artificial de Google
 
 *Read this in other languages: [English](Manual_Gemini.md), [Português](Manual_Gemini.pr.md), [Español](Manual_Gemini.es.md)*
   
-![banner](imgs/Banner_Gemini.jpg)
+![banner](imgs\Banner_Gemini.jpg)
 ## Como instalar este módulo
   
 Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
@@ -74,5 +74,14 @@ Genera contenido proporcionando un archivo de audio de la información que desea
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué escuchar en el audio?|
+|Archivo|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
+|Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
+
+### Generar Contenido Desde Video
+  
+Genera contenido proporcionando un archivo de video de la información que deseas
+|Parámetros|Descripción|ejemplo|
+| --- | --- | --- |
+|Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué  contiene el video?|
 |Archivo|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
