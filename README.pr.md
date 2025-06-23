@@ -34,7 +34,10 @@ Gere conteúdo fornecendo um arquivo .txt das informações que deseja
 Gere conteúdo fornecendo um arquivo .pdf das informações que deseja
 
 6. Gerar Conteúdo Desde Audio  
-Gere conteúdo fornecendo um arquivo de audio das informações que deseja  
+Gere conteúdo fornecendo um arquivo de audio das informações que deseja
+
+7. Gerar conteúdo a partir de vídeos  
+Gerar conteúdo fornecendo um arquivo de vídeo com as informações desejadas  
 
 
 
@@ -51,5 +54,5 @@ Gere conteúdo fornecendo um arquivo de audio das informações que deseja
 
 ### License
   
-![MIT](https://img.shields.io/github/license/instaloader/instaloader.svg)  
-[MIT](https://opensource.org/license/mit)
+![MIT](https://camo.githubusercontent.com/107590fac8cbd65071396bb4d04040f76cde5bde/687474703a2f2f696d672e736869656c64732e696f2f3a6c6963656e73652d6d69742d626c75652e7376673f7374796c653d666c61742d737175617265)  
+[MIT](http://opensource.org/licenses/mit-license.ph)

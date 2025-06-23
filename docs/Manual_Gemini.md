@@ -7,8 +7,8 @@
 This module allows you to work with the Google Gemini AI API  
 
 *Read this in other languages: [English](Manual_Gemini.md), [Português](Manual_Gemini.pr.md), [Español](Manual_Gemini.es.md)*
-
-![banner](imgs/Banner_Gemini.jpg)
+  
+![banner](imgs\Banner_Gemini.jpg)
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -74,5 +74,14 @@ Generate content by providing an audio file of the information you want
 |Parameters|Description|example|
 | --- | --- | --- |
 |Prompt|Text that will be used as a prompt to generate the content|What do you listen in the audio?|
+|File|File that will be used as a prompt to generate the content|Select a file|
+|Assign result to variable|Variable where the execution result will be stored|result|
+
+### Generate Content From Video
+  
+Generate content by providing a video file of your desired information
+|Parameters|Description|example|
+| --- | --- | --- |
+|Prompt|Text that will be used as a prompt to generate the content|What the video containso?|
 |File|File that will be used as a prompt to generate the content|Select a file|
 |Assign result to variable|Variable where the execution result will be stored|result|

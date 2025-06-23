@@ -34,7 +34,10 @@ Genera contenido proporcionando un archivo .txt de la información que deseas
 Genera contenido proporcionando un archivo .pdf de la información que deseas
 
 6. Generar Contenido Desde Audio  
-Genera contenido proporcionando un archivo de audio de la información que deseas  
+Genera contenido proporcionando un archivo de audio de la información que deseas
+
+7. Generar Contenido Desde Video  
+Genera contenido proporcionando un archivo de video de la información que deseas  
 
 
 
@@ -51,5 +54,5 @@ Genera contenido proporcionando un archivo de audio de la información que desea
 
 ### License
   
-![MIT](https://img.shields.io/github/license/instaloader/instaloader.svg)  
-[MIT](https://opensource.org/license/mit)
+![MIT](https://camo.githubusercontent.com/107590fac8cbd65071396bb4d04040f76cde5bde/687474703a2f2f696d672e736869656c64732e696f2f3a6c6963656e73652d6d69742d626c75652e7376673f7374796c653d666c61742d737175617265)  
+[MIT](http://opensource.org/licenses/mit-license.ph)
