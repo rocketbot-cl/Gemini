@@ -58,8 +58,9 @@ try:
             result = GetParams("result")
 
             genai.configure(api_key=api_key)
-            get_model = genai.get_model("models/gemini-1.5-flash-latest")
-            mod_model_Gemini = genai.GenerativeModel("gemini-1.5-flash")
+            # get_model = genai.get_model("models/gemini-1.5-flash-latest")  # Modelo retirado
+            # mod_model_Gemini = genai.GenerativeModel("gemini-1.5-flash")    # Modelo retirado
+            mod_model_Gemini = genai.GenerativeModel("gemini-2.0-flash")  # Actualización
             SetVar(result, True)
 
         except Exception as e:
