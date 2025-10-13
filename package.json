@@ -8,7 +8,7 @@
     "pr": "Este módulo permite trabalhar com a API de IA do Google Gemini"
 },
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "license": "MIT",
   "homepage": "http://rocketbot.com",
   "linux": true,
@@ -67,16 +67,41 @@
             "css": "col-md-6"
           },
           {
+      "type": "input",
+      "placeholder": {
+          "es": "gemini-2.0-flash",
+          "en": "gemini-2.0-flash",
+          "pr": "gemini-2.0-flash"
+      },
+      "title": {
+          "es": "Modelo",
+          "en": "Model",
+          "pr": "Modelo"
+      },
+      "description": {
+          "es": "Modelo de Gemini a usar.",
+          "en": "Gemini model to use.",
+          "pr": "Modelo Gemini a usar."
+      },
+      "help": {
+          "en": "The gemini-2.0-flash model is currently accessible to those who have a Google AI Developer Platform account and have enabled billing in their Google Cloud project..",
+          "es": "El modelo gemini-2.0-flash actualmente es accesible para aquellos que tengan una cuenta en la plataforma de desarrolladores de Google AI y que hayan activado la facturación en su proyecto de Google Cloud",
+          "pr": "No momento, o modelo gemini-2.0-flash está acessível para aqueles que têm uma conta do Google AI Developer Platform e ativaram o faturamento em seu projeto do Google Cloud.."
+      },
+      "id": "model_name",
+      "css": "col-md-4"
+        },
+          {
             "type": "input",
             "placeholder": {
-              "es": "result",
+              "es": "resultado",
               "en": "result",
-              "pr": "result"
+              "pr": "resul"
             },
             "description": {
-              "es": "Variable donde se almacenará el resultado de la conexión",
-              "en": "Variable where the connection result will be stored",
-              "pr": "Variável onde o resultado da conexão será armazenado"
+              "es": "Variable donde se almacenará el modelo de Gemini",
+              "en": "Variable where the Gemini model is to be stored",
+              "pr": "Variável onde o modelo Gemini será armazenado"
             },
             "title": {
               "es": "Asignar resultado a variable",
@@ -85,7 +110,7 @@
             },
             "remove_vars": true,
             "id": "result",
-            "css": "col-md-6"
+            "css": "col-md-4"
           }
         ]
       },
