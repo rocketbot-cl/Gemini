@@ -1,3 +1,4 @@
+
 # coding: utf-8
 """
 Base para desarrollo de modulos externos.
@@ -55,12 +56,15 @@ try:
     if module == "connect":
         try:
             api_key = GetParams("api_key")
-            result = GetParams("result")
+            result = GetParams("result") 
+            model_name = GetParams("model_name") or "gemini-2.0-flash"
 
             genai.configure(api_key=api_key)
             # get_model = genai.get_model("models/gemini-1.5-flash-latest")  # Modelo retirado
             # mod_model_Gemini = genai.GenerativeModel("gemini-1.5-flash")    # Modelo retirado
-            mod_model_Gemini = genai.GenerativeModel("gemini-2.0-flash")  # Actualización
+            #mod_model_Gemini = genai.GenerativeModel("gemini-2.0-flash")  # Actualización
+            mod_model_Gemini = genai.GenerativeModel(model_name)
+            
             SetVar(result, True)
 
         except Exception as e:
