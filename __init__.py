@@ -52,6 +52,50 @@ except NameError:
 
 module = GetParams("module")
 
+
+global parse_into_schema, gemini_schema_mapper
+gemini_schema_mapper = {
+    "str": str,
+    "int": int,
+    "float": float, 
+    "bool": bool,
+    "list": list,
+    "dict": dict
+}
+
+def parse_into_schema(schema, class_name="Schema"):
+    import typing_extensions
+    print("1")
+    parsed_schema = {}
+
+    print(schema)
+    for key, value in schema.items():
+        print("hs")
+        if isinstance(value, dict):
+            sub_class_name = f"Schema_{key}"
+            parsed_schema[key] = parse_into_schema(schema=value, class_name=sub_class_name)
+        else:
+            parsed_schema[key] = gemini_schema_mapper.get(value.strip().lower(), str)
+
+    return typing_extensions.TypedDict(class_name, parsed_schema)
+
+
+
+def get_response_with_schema(schema, is_list, content):
+    import ast
+
+    dict_schema: dict = ast.literal_eval(schema)
+    print("next")
+    if type(dict_schema) != dict:
+        raise Exception("Response schema could not be parsed")
+
+    parsed_schema = {}
+    Final_schema = parse_into_schema(dict_schema)
+    config={"response_mime_type": "application/json", "response_schema": list[Final_schema] if is_list else Final_schema}
+
+
+    return mod_model_Gemini.generate_content(content, generation_config=config)
+
 try:
     if module == "connect":
         try:
@@ -76,10 +120,14 @@ try:
 
     if module == "generate_content":
         try:
+
             prompt = GetParams("prompt")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
             result = GetParams("result")
 
-            response = mod_model_Gemini.generate_content(prompt)
+            response = get_response_with_schema(schema, is_list, prompt) if schema else mod_model_Gemini.generate_content(prompt)
+            
             SetVar(result, response.text)
 
         except Exception as e:
@@ -91,13 +139,16 @@ try:
             path = GetParams("image")
             prompt = GetParams("prompt")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
 
             if not path.endswith((".png", ".jpeg", ".webp",".heic", ".heif")):
                 raise Exception("File format not supported by Gemini AI using this module")
                 
             file_image = PIL.Image.open(path)
 
-            response = mod_model_Gemini.generate_content([prompt, file_image])
+            response = get_response_with_schema(schema, is_list, [prompt, file_image]) if schema else mod_model_Gemini.generate_content([prompt, file_image])
+
             SetVar(result, response.text)
 
         except Exception as e:
@@ -108,8 +159,13 @@ try:
         try:
             path = GetParams("file")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+
             text = open(path,'r').read()
-            response = mod_model_Gemini.generate_content(text)
+            
+            response = get_response_with_schema(schema, is_list, text) if schema else mod_model_Gemini.generate_content(text)
+
             SetVar(result, response.text)
 
         except Exception as e:
@@ -121,12 +177,15 @@ try:
             path = GetParams("file")
             prompt = GetParams("prompt")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+
             if not path.endswith(".pdf"):
                 raise Exception("Not .pdf formats not supported for pdf extraction")
             
             sample_pdf = genai.upload_file(path)
 
-            response = mod_model_Gemini.generate_content([prompt, sample_pdf])
+            response = get_response_with_schema(schema, is_list, [prompt, sample_pdf]) if schema else mod_model_Gemini.generate_content([prompt, sample_pdf])
             SetVar(result, response.text)
 
         except Exception as e:
@@ -138,12 +197,15 @@ try:
             path = GetParams("file")
             prompt = GetParams("prompt")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+
             if not path.endswith((".wav", ".mp3", ".aiff",".aac", ".ogg", ".flac")):
                 raise Exception("File format not supported by Gemini AI using this module")
             
             file = genai.upload_file(path)
 
-            response = mod_model_Gemini.generate_content([file, prompt])
+            response = get_response_with_schema(schema, is_list, [file, prompt]) if schema else mod_model_Gemini.generate_content([file, prompt])
             SetVar(result, response.text)
 
         except Exception as e:
@@ -156,6 +218,8 @@ try:
             path = GetParams("file")
             prompt = GetParams("prompt")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
             # if not path.endswith("mp4"):
             #     raise Exception("File format not supported by Gemini AI using this module")
             
@@ -165,7 +229,7 @@ try:
                 sleep(5)
                 file = genai.get_file(file.name)
             print(file)
-            response = mod_model_Gemini.generate_content([file, prompt])
+            response = get_response_with_schema(schema, is_list, [file, prompt]) if schema else mod_model_Gemini.generate_content([file, prompt])
             SetVar(result, response.text)
 
         except Exception as e:

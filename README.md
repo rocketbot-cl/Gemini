@@ -3,41 +3,41 @@
 
 
 # Gemini
-  
-This module allows you to work with the Google Gemini AI API  
+
+This module allows you to work with the Google Gemini AI API
 
 *Read this in other languages: [English](README.md), [Português](README.pr.md), [Español](README.es.md)*
 
 ## How to install this module
-  
+
 To install the module in Rocketbot Studio, it can be done in two ways:
 1. Manual: __Download__ the .zip file and unzip it in the modules folder. The folder name must be the same as the module and inside it must have the following files and folders: \__init__.py, package.json, docs, example and libs. If you have the application open, refresh your browser to be able to use the new module.
-2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.  
+2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.
 
 
 ## Overview
 
 
-1. Connect to Gemini  
+1. Connect to Gemini
 Connect to the Google Gemini API
 
-2. Generate Content  
+2. Generate Content
 Generate content by providing a prompt of the information you want
 
-3. Read Image  
+3. Read Image
 Generate content by providing a prompt with a file route you want
 
-4. Generate Content From txt  
+4. Generate Content From txt
 Generate content by providing a .txt file of the information you want
 
-5. Generate Content From pdf  
+5. Generate Content From pdf
 Generate content by providing a .pdf file of the information you want
 
-6. Generate Content From Audio  
+6. Generate Content From Audio
 Generate content by providing an audio file of the information you want
 
-7. Generate Content From Video  
-Generate content by providing a video file of your desired information  
+7. Generate Content From Video
+Generate content by providing a video file of your desired information
 
 
 
@@ -53,6 +53,6 @@ Generate content by providing a video file of your desired information
 ### Dependencies
 
 ### License
-  
-![MIT](https://camo.githubusercontent.com/107590fac8cbd65071396bb4d04040f76cde5bde/687474703a2f2f696d672e736869656c64732e696f2f3a6c6963656e73652d6d69742d626c75652e7376673f7374796c653d666c61742d737175617265)  
-[MIT](http://opensource.org/licenses/mit-license.ph)
+
+![MIT](https://img.shields.io/github/license/instaloader/instaloader.svg)
+[MIT](https://opensource.org/license/mit)
