@@ -53,27 +53,23 @@ except NameError:
 module = GetParams("module")
 
 
-global parse_into_schema, gemini_schema_mapper
+global parse_into_gemini_schema, gemini_schema_mapper
 gemini_schema_mapper = {
-    "str": str,
-    "int": int,
-    "float": float, 
-    "bool": bool,
-    "list": list,
-    "dict": dict
+    "string": str,
+    "integer": int,
+    "number": float, 
+    "boolean": bool,
+    "array": list,
 }
 
-def parse_into_schema(schema, class_name="Schema"):
+def parse_into_gemini_schema(schema, class_name="Schema"):
     import typing_extensions
-    print("1")
     parsed_schema = {}
 
-    print(schema)
     for key, value in schema.items():
-        print("hs")
         if isinstance(value, dict):
             sub_class_name = f"Schema_{key}"
-            parsed_schema[key] = parse_into_schema(schema=value, class_name=sub_class_name)
+            parsed_schema[key] = parse_into_gemini_schema(schema=value, class_name=sub_class_name)
         else:
             parsed_schema[key] = gemini_schema_mapper.get(value.strip().lower(), str)
 
@@ -85,12 +81,10 @@ def get_response_with_schema(schema, is_list, content):
     import ast
 
     dict_schema: dict = ast.literal_eval(schema)
-    print("next")
     if type(dict_schema) != dict:
         raise Exception("Response schema could not be parsed")
 
-    parsed_schema = {}
-    Final_schema = parse_into_schema(dict_schema)
+    Final_schema = parse_into_gemini_schema(dict_schema)
     config={"response_mime_type": "application/json", "response_schema": list[Final_schema] if is_list else Final_schema}
 
 

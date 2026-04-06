@@ -172,14 +172,14 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "en": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
+              "es": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "en": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "pr": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}"
             },
             "description": {
-              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"int\", \"float\", \"str\", \"bool\" y \"list\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
-              "en": "Format of the generated content (optional). \nThe possible types are: \"int\", \"float\", \"str\", \"bool\" and \"list\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
-              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"int\", \"float\", \"str\", \"bool\" e \"list\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
+              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
+              "en": "Format of the generated content (optional). \nThe possible types are: \"string\", \"number\", \"integer\", \"boolean\" and \"array\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
+              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"string\", \"number\", \"integer\", \"boolean\" e \"array\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
             },
             "title": {
               "es": "Esquema de respuesta (opcional)",
@@ -312,9 +312,9 @@
               "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
             },
             "description": {
-              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"int\", \"float\", \"str\", \"bool\" y \"list\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
-              "en": "Format of the generated content (optional). \nThe possible types are: \"int\", \"float\", \"str\", \"bool\" and \"list\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
-              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"int\", \"float\", \"str\", \"bool\" e \"list\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
+              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
+              "en": "Format of the generated content (optional). \nThe possible types are: \"string\", \"number\", \"integer\", \"boolean\" and \"array\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
+              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"string\", \"number\", \"integer\", \"boolean\" e \"array\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
             },
             "title": {
               "es": "Esquema de respuesta (opcional)",
@@ -446,9 +446,9 @@
               "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
             },
             "description": {
-              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"int\", \"float\", \"str\", \"bool\" y \"list\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
-              "en": "Format of the generated content (optional). \nThe possible types are: \"int\", \"float\", \"str\", \"bool\" and \"list\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
-              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"int\", \"float\", \"str\", \"bool\" e \"list\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
+              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
+              "en": "Format of the generated content (optional). \nThe possible types are: \"string\", \"number\", \"integer\", \"boolean\" and \"array\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
+              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"string\", \"number\", \"integer\", \"boolean\" e \"array\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
             },
             "title": {
               "es": "Esquema de respuesta (opcional)",
@@ -581,9 +581,9 @@
               "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
             },
             "description": {
-              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"int\", \"float\", \"str\", \"bool\" y \"list\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
-              "en": "Format of the generated content (optional). \nThe possible types are: \"int\", \"float\", \"str\", \"bool\" and \"list\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
-              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"int\", \"float\", \"str\", \"bool\" e \"list\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
+              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
+              "en": "Format of the generated content (optional). \nThe possible types are: \"string\", \"number\", \"integer\", \"boolean\" and \"array\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
+              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"string\", \"number\", \"integer\", \"boolean\" e \"array\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
             },
             "title": {
               "es": "Esquema de respuesta (opcional)",
@@ -715,9 +715,9 @@
               "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
             },
             "description": {
-              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"int\", \"float\", \"str\", \"bool\" y \"list\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
-              "en": "Format of the generated content (optional). \nThe possible types are: \"int\", \"float\", \"str\", \"bool\" and \"list\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
-              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"int\", \"float\", \"str\", \"bool\" e \"list\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
+              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
+              "en": "Format of the generated content (optional). \nThe possible types are: \"string\", \"number\", \"integer\", \"boolean\" and \"array\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
+              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"string\", \"number\", \"integer\", \"boolean\" e \"array\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
             },
             "title": {
               "es": "Esquema de respuesta (opcional)",
@@ -849,9 +849,9 @@
               "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
             },
             "description": {
-              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"int\", \"float\", \"str\", \"bool\" y \"list\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
-              "en": "Format of the generated content (optional). \nThe possible types are: \"int\", \"float\", \"str\", \"bool\" and \"list\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
-              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"int\", \"float\", \"str\", \"bool\" e \"list\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
+              "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
+              "en": "Format of the generated content (optional). \nThe possible types are: \"string\", \"number\", \"integer\", \"boolean\" and \"array\". \nTo indicate a nested object, you can use another dictionary with the same structure.",
+              "pr": "Formato do conteúdo gerado (opcional). \nOs tipos possíveis são: \"string\", \"number\", \"integer\", \"boolean\" e \"array\". \nPara indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura."
             },
             "title": {
               "es": "Esquema de respuesta (opcional)",

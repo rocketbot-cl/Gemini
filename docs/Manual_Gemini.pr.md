@@ -57,8 +57,8 @@ Gere conteúdo fornecendo um prompt das informações que deseja
 | --- | --- | --- |
 |Prompt|Texto que será usado como prompt para gerar o conteúdo|O que é Rocketbot?|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
-Os tipos possíveis são "int", "float", "str", "bool" e "list". 
-Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
+Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
+Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
 
@@ -70,7 +70,7 @@ Gere conteúdo fornecendo um prompt com uma rota de arquivo que você deseja
 |Prompt|Texto que será usado como prompt para gerar o conteúdo desde à imagem|O que é você pode olhar na imagem?|
 |Imagem|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
-Os tipos possíveis são "int", "float", "str", "bool" e "list". 
+Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
 Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
@@ -83,7 +83,7 @@ Gere conteúdo fornecendo um arquivo .txt das informações que deseja
 |Prompt|Texto que será usado como prompt para gerar o conteúdo|O que você lê no arquivo txt?|
 |Arquivo|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
-Os tipos possíveis são "int", "float", "str", "bool" e "list". 
+Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
 Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
@@ -96,7 +96,7 @@ Gere conteúdo fornecendo um arquivo .pdf das informações que deseja
 |Prompt|Texto que será usado como prompt para gerar o conteúdo|O que você lê no arquivo pdf?|
 |Arquivo|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
-Os tipos possíveis são "int", "float", "str", "bool" e "list". 
+Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
 Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
@@ -109,7 +109,7 @@ Gere conteúdo fornecendo um arquivo de audio das informações que deseja
 |Prompt|Texto que será usado como prompt para gerar o conteúdo|O que você ouve no áudio?|
 |Arquivo|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
-Os tipos possíveis são "int", "float", "str", "bool" e "list". 
+Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
 Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
@@ -122,7 +122,7 @@ Gerar conteúdo fornecendo um arquivo de vídeo com as informações desejadas
 |Prompt|Texto que será usado como prompt para gerar o conteúdo|O que o vídeo contém?|
 |Arquivo|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
-Os tipos possíveis são "int", "float", "str", "bool" e "list". 
+Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
 Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|

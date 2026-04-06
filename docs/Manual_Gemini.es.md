@@ -59,8 +59,8 @@ Genera contenido proporcionando un prompt de la información que deseas
 | --- | --- | --- |
 |Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué es Rocketbot?|
 |Esquema de respuesta (opcional)|Formato del contenido generado (opcional). 
-Los posibles tipos son "int", "float", "str", "bool" y "list". 
-Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
+Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
+Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
@@ -72,7 +72,7 @@ Genera contenido proporcionando una imagen de la ruta de archivo que desees
 |Prompt|Texto que se utilizará como prompt para generar el contenido a partir de la imagen|¿Qué puedes ver en la imagen?|
 |Imagen|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
 |Esquema de respuesta (opcional)|Formato del contenido generado (opcional). 
-Los posibles tipos son "int", "float", "str", "bool" y "list". 
+Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
@@ -85,7 +85,7 @@ Genera contenido proporcionando un archivo .txt de la información que deseas
 |Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué lees en el archivo txt?|
 |Archivo|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
 |Esquema de respuesta (opcional)|Formato del contenido generado (opcional). 
-Los posibles tipos son "int", "float", "str", "bool" y "list". 
+Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
@@ -98,7 +98,7 @@ Genera contenido proporcionando un archivo .pdf de la información que deseas
 |Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué lees en el archivo pdf?|
 |Archivo|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
 |Esquema de respuesta (opcional)|Formato del contenido generado (opcional). 
-Los posibles tipos son "int", "float", "str", "bool" y "list". 
+Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
@@ -111,7 +111,7 @@ Genera contenido proporcionando un archivo de audio de la información que desea
 |Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué escuchar en el audio?|
 |Archivo|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
 |Esquema de respuesta (opcional)|Formato del contenido generado (opcional). 
-Los posibles tipos son "int", "float", "str", "bool" y "list". 
+Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
@@ -124,7 +124,7 @@ Genera contenido proporcionando un archivo de video de la información que desea
 |Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué  contiene el video?|
 |Archivo|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
 |Esquema de respuesta (opcional)|Formato del contenido generado (opcional). 
-Los posibles tipos son "int", "float", "str", "bool" y "list". 
+Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|

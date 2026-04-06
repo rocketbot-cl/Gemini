@@ -57,8 +57,8 @@ Generate content by providing a prompt of the information you want
 | --- | --- | --- |
 |Prompt|Text that will be used as a prompt to generate the content|What is Rocketbot?|
 |Response schema (optional)|Format of the generated content (optional). 
-The possible types are "int", "float", "str", "bool" and "list". 
-To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
+The possible types are "string", "number", "integer", "boolean" and "array". 
+To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
 |Assign result to variable|Variable where the execution result will be stored|result|
 
@@ -70,7 +70,7 @@ Generate content by providing a prompt with a file route you want
 |Prompt|Text that will be used as a prompt to generate the content from the image|What can you see in the image?|
 |Image|File that will be used as a prompt to generate the content|Select a file|
 |Response schema (optional)|Format of the generated content (optional). 
-The possible types are "int", "float", "str", "bool" and "list". 
+The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
 |Assign result to variable|Variable where the execution result will be stored|result|
@@ -83,7 +83,7 @@ Generate content by providing a .txt file of the information you want
 |Prompt|Text that will be used as a prompt to generate the content|What do you read in the txt file?|
 |File|File that will be used as a prompt to generate the content|Select a file|
 |Response schema (optional)|Format of the generated content (optional). 
-The possible types are "int", "float", "str", "bool" and "list". 
+The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
 |Assign result to variable|Variable where the execution result will be stored|result|
@@ -96,7 +96,7 @@ Generate content by providing a .pdf file of the information you want
 |Prompt|Text that will be used as a prompt to generate the content|What do you read in the pdf file?|
 |File|File that will be used as a prompt to generate the content|Select a file|
 |Response schema (optional)|Format of the generated content (optional). 
-The possible types are "int", "float", "str", "bool" and "list". 
+The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
 |Assign result to variable|Variable where the execution result will be stored|result|
@@ -109,7 +109,7 @@ Generate content by providing an audio file of the information you want
 |Prompt|Text that will be used as a prompt to generate the content|What do you listen in the audio?|
 |File|File that will be used as a prompt to generate the content|Select a file|
 |Response schema (optional)|Format of the generated content (optional). 
-The possible types are "int", "float", "str", "bool" and "list". 
+The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
 |Assign result to variable|Variable where the execution result will be stored|result|
@@ -122,7 +122,7 @@ Generate content by providing a video file of your desired information
 |Prompt|Text that will be used as a prompt to generate the content|What the video containso?|
 |File|File that will be used as a prompt to generate the content|Select a file|
 |Response schema (optional)|Format of the generated content (optional). 
-The possible types are "int", "float", "str", "bool" and "list". 
+The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
 |Assign result to variable|Variable where the execution result will be stored|result|
