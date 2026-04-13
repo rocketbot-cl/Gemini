@@ -62,6 +62,7 @@ Genera contenido proporcionando un prompt de la información que deseas
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Leer Imagen
@@ -75,6 +76,7 @@ Genera contenido proporcionando una imagen de la ruta de archivo que desees
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Generar Contenido Desde txt
@@ -88,6 +90,7 @@ Genera contenido proporcionando un archivo .txt de la información que deseas
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Generar Contenido Desde pdf
@@ -101,6 +104,7 @@ Genera contenido proporcionando un archivo .pdf de la información que deseas
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Generar Contenido Desde Audio
@@ -114,6 +118,7 @@ Genera contenido proporcionando un archivo de audio de la información que desea
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Generar Contenido Desde Video
@@ -127,4 +132,5 @@ Genera contenido proporcionando un archivo de video de la información que desea
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|

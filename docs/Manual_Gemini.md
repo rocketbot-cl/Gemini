@@ -60,6 +60,7 @@ Generate content by providing a prompt of the information you want
 The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
+|Timeout (seconds)|Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.|60|
 |Assign result to variable|Variable where the execution result will be stored|result|
 
 ### Read Image
@@ -73,6 +74,7 @@ Generate content by providing a prompt with a file route you want
 The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
+|Timeout (seconds)|Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.|60|
 |Assign result to variable|Variable where the execution result will be stored|result|
 
 ### Generate Content From txt
@@ -86,6 +88,7 @@ Generate content by providing a .txt file of the information you want
 The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
+|Timeout (seconds)|Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.|60|
 |Assign result to variable|Variable where the execution result will be stored|result|
 
 ### Generate Content From pdf
@@ -99,6 +102,7 @@ Generate content by providing a .pdf file of the information you want
 The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
+|Timeout (seconds)|Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.|60|
 |Assign result to variable|Variable where the execution result will be stored|result|
 
 ### Generate Content From Audio
@@ -112,6 +116,7 @@ Generate content by providing an audio file of the information you want
 The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
+|Timeout (seconds)|Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.|60|
 |Assign result to variable|Variable where the execution result will be stored|result|
 
 ### Generate Content From Video
@@ -125,4 +130,5 @@ Generate content by providing a video file of your desired information
 The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "str", "number": "float", "sub_object": {...}}|
 |Return list of items|Check if you want the response to be an array of objects following the given schema|Checkbox|
+|Timeout (seconds)|Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.|60|
 |Assign result to variable|Variable where the execution result will be stored|result|

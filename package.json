@@ -203,7 +203,28 @@
                 "pr": "Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido"
             },
             "id": "is_list",
-            "css": "col-md-6"
+            "css": "col-md-4"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "60",
+              "en": "60",
+              "pr": "60"
+            },
+            "description": {
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+            },
+            "title": {
+              "es": "Timeout (segundos)",
+              "en": "Timeout (seconds)",
+              "pr": "Timeout (segundos)"
+            },
+            "remove_vars": true,
+            "id": "timeout",
+            "css": "col-md-4"
           },
           {
             "type": "input",
@@ -224,7 +245,7 @@
             },
             "remove_vars": true,
             "id": "result",
-            "css": "col-md-6"
+            "css": "col-md-4"
           }
         ]
       },
@@ -338,7 +359,28 @@
                 "pr": "Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido"
             },
             "id": "is_list",
-            "css": "col-md-6"
+            "css": "col-md-4"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "60",
+              "en": "60",
+              "pr": "60"
+            },
+            "description": {
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+            },
+            "title": {
+              "es": "Timeout (segundos)",
+              "en": "Timeout (seconds)",
+              "pr": "Timeout (segundos)"
+            },
+            "remove_vars": true,
+            "id": "timeout",
+            "css": "col-md-4"
           },
           {
             "type": "input",
@@ -359,7 +401,7 @@
             },
             "remove_vars": true,
             "id": "result",
-            "css": "col-md-6"
+            "css": "col-md-4"
           }
         ]
       },
@@ -472,7 +514,28 @@
                 "pr": "Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido"
             },
             "id": "is_list",
-            "css": "col-md-6"
+            "css": "col-md-4"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "60",
+              "en": "60",
+              "pr": "60"
+            },
+            "description": {
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+            },
+            "title": {
+              "es": "Timeout (segundos)",
+              "en": "Timeout (seconds)",
+              "pr": "Timeout (segundos)"
+            },
+            "remove_vars": true,
+            "id": "timeout",
+            "css": "col-md-4"
           },
           {
             "type": "input",
@@ -493,7 +556,7 @@
             },
             "remove_vars": true,
             "id": "result",
-            "css": "col-md-6"
+            "css": "col-md-4"
           }
         ]
       },
@@ -607,7 +670,28 @@
                 "pr": "Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido"
             },
             "id": "is_list",
-            "css": "col-md-6"
+            "css": "col-md-4"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "60",
+              "en": "60",
+              "pr": "60"
+            },
+            "description": {
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+            },
+            "title": {
+              "es": "Timeout (segundos)",
+              "en": "Timeout (seconds)",
+              "pr": "Timeout (segundos)"
+            },
+            "remove_vars": true,
+            "id": "timeout",
+            "css": "col-md-4"
           },
           {
             "type": "input",
@@ -628,7 +712,7 @@
             },
             "remove_vars": true,
             "id": "result",
-            "css": "col-md-6"
+            "css": "col-md-4"
           }
         ]
       },
@@ -741,7 +825,28 @@
                 "pr": "Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido"
             },
             "id": "is_list",
-            "css": "col-md-6"
+            "css": "col-md-4"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "60",
+              "en": "60",
+              "pr": "60"
+            },
+            "description": {
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+            },
+            "title": {
+              "es": "Timeout (segundos)",
+              "en": "Timeout (seconds)",
+              "pr": "Timeout (segundos)"
+            },
+            "remove_vars": true,
+            "id": "timeout",
+            "css": "col-md-4"
           },
           {
             "type": "input",
@@ -762,7 +867,7 @@
             },
             "remove_vars": true,
             "id": "result",
-            "css": "col-md-6"
+            "css": "col-md-4"
           }
         ]
       },
@@ -875,7 +980,28 @@
                 "pr": "Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido"
             },
             "id": "is_list",
-            "css": "col-md-6"
+            "css": "col-md-4"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "60",
+              "en": "60",
+              "pr": "60"
+            },
+            "description": {
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+            },
+            "title": {
+              "es": "Timeout (segundos)",
+              "en": "Timeout (seconds)",
+              "pr": "Timeout (segundos)"
+            },
+            "remove_vars": true,
+            "id": "timeout",
+            "css": "col-md-4"
           },
           {
             "type": "input",
@@ -896,7 +1022,7 @@
             },
             "remove_vars": true,
             "id": "result",
-            "css": "col-md-6"
+            "css": "col-md-4"
           }
         ]
       },
