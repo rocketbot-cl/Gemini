@@ -119,7 +119,7 @@ try:
             schema = GetParams("schema")
             is_list = GetParams("is_list")
             result = GetParams("result")
-            timeout = int(GetParams("timeout")) or 60
+            timeout = int(GetParams("timeout") or "60")
 
             response = get_response_with_schema(schema, is_list, prompt, timeout) if schema else mod_model_Gemini.generate_content(prompt)
             
@@ -136,7 +136,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout")) or 60
+            timeout = int(GetParams("timeout") or "60")
 
             if not path.endswith((".png", ".jpeg", ".webp",".heic", ".heif")):
                 raise Exception("File format not supported by Gemini AI using this module")
@@ -157,7 +157,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout")) or 60
+            timeout = int(GetParams("timeout") or "60")
 
             text = open(path,'r').read()
             
@@ -176,7 +176,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout")) or 60
+            timeout = int(GetParams("timeout") or "60")
 
             if not path.endswith(".pdf"):
                 raise Exception("Not .pdf formats not supported for pdf extraction")
@@ -197,7 +197,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout")) or 60
+            timeout = int(GetParams("timeout") or "60")
 
             if not path.endswith((".wav", ".mp3", ".aiff",".aac", ".ogg", ".flac")):
                 raise Exception("File format not supported by Gemini AI using this module")
@@ -219,7 +219,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout")) or 60
+            timeout = int(GetParams("timeout") or "60")
             # if not path.endswith("mp4"):
             #     raise Exception("File format not supported by Gemini AI using this module")
             
