@@ -52,6 +52,44 @@ except NameError:
 
 module = GetParams("module")
 
+
+global parse_into_gemini_schema, gemini_schema_mapper
+gemini_schema_mapper = {
+    "string": str,
+    "integer": int,
+    "number": float, 
+    "boolean": bool,
+    "array": list,
+}
+
+def parse_into_gemini_schema(schema, class_name="Schema"):
+    import typing_extensions
+    parsed_schema = {}
+
+    for key, value in schema.items():
+        if isinstance(value, dict):
+            sub_class_name = f"Schema_{key}"
+            parsed_schema[key] = parse_into_gemini_schema(schema=value, class_name=sub_class_name)
+        else:
+            parsed_schema[key] = gemini_schema_mapper.get(value.strip().lower(), str)
+
+    return typing_extensions.TypedDict(class_name, parsed_schema)
+
+
+
+def get_response_with_schema(schema, is_list, content, timeout):
+    import ast
+
+    dict_schema: dict = ast.literal_eval(schema)
+    if type(dict_schema) != dict:
+        raise Exception("Response schema could not be parsed")
+
+    Final_schema = parse_into_gemini_schema(dict_schema)
+    config={"response_mime_type": "application/json", "response_schema": list[Final_schema] if is_list else Final_schema}
+
+
+    return mod_model_Gemini.generate_content(content, generation_config=config, request_options={"timeout": timeout})
+
 try:
     if module == "connect":
         try:
@@ -76,10 +114,20 @@ try:
 
     if module == "generate_content":
         try:
-            prompt = GetParams("prompt")
-            result = GetParams("result")
 
-            response = mod_model_Gemini.generate_content(prompt)
+            prompt = GetParams("prompt")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+            result = GetParams("result")
+            timeout = int(GetParams("timeout") or "60")
+            
+            if isinstance(is_list, str):
+                is_list = is_list.strip().lower() in ["true", "1", "yes"]
+            else:
+                is_list = bool(is_list)
+
+            response = get_response_with_schema(schema, is_list, prompt, timeout) if schema else mod_model_Gemini.generate_content(prompt, request_options={"timeout": timeout})
+            
             SetVar(result, response.text)
 
         except Exception as e:
@@ -91,13 +139,22 @@ try:
             path = GetParams("image")
             prompt = GetParams("prompt")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+            timeout = int(GetParams("timeout") or "60")
+
+            if isinstance(is_list, str):
+                is_list = is_list.strip().lower() in ["true", "1", "yes"]
+            else:
+                is_list = bool(is_list)
 
             if not path.endswith((".png", ".jpeg", ".webp",".heic", ".heif")):
                 raise Exception("File format not supported by Gemini AI using this module")
                 
             file_image = PIL.Image.open(path)
 
-            response = mod_model_Gemini.generate_content([prompt, file_image])
+            response = get_response_with_schema(schema, is_list, [prompt, file_image], timeout) if schema else mod_model_Gemini.generate_content([prompt, file_image], request_options={"timeout": timeout})
+            
             SetVar(result, response.text)
 
         except Exception as e:
@@ -108,8 +165,19 @@ try:
         try:
             path = GetParams("file")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+            timeout = int(GetParams("timeout") or "60")
+
+            if isinstance(is_list, str):
+                is_list = is_list.strip().lower() in ["true", "1", "yes"]
+            else:
+                is_list = bool(is_list)
+
             text = open(path,'r').read()
-            response = mod_model_Gemini.generate_content(text)
+            
+            response = get_response_with_schema(schema, is_list, text, timeout) if schema else mod_model_Gemini.generate_content(text, request_options={"timeout": timeout})
+
             SetVar(result, response.text)
 
         except Exception as e:
@@ -121,12 +189,21 @@ try:
             path = GetParams("file")
             prompt = GetParams("prompt")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+            timeout = int(GetParams("timeout") or "60")
+
+            if isinstance(is_list, str):
+                is_list = is_list.strip().lower() in ["true", "1", "yes"]
+            else:
+                is_list = bool(is_list)
+
             if not path.endswith(".pdf"):
                 raise Exception("Not .pdf formats not supported for pdf extraction")
             
             sample_pdf = genai.upload_file(path)
 
-            response = mod_model_Gemini.generate_content([prompt, sample_pdf])
+            response = get_response_with_schema(schema, is_list, [prompt, sample_pdf], timeout) if schema else mod_model_Gemini.generate_content([prompt, sample_pdf], request_options={"timeout": timeout})
             SetVar(result, response.text)
 
         except Exception as e:
@@ -138,12 +215,21 @@ try:
             path = GetParams("file")
             prompt = GetParams("prompt")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+            timeout = int(GetParams("timeout") or "60")
+
+            if isinstance(is_list, str):
+                is_list = is_list.strip().lower() in ["true", "1", "yes"]
+            else:
+                is_list = bool(is_list)
+
             if not path.endswith((".wav", ".mp3", ".aiff",".aac", ".ogg", ".flac")):
                 raise Exception("File format not supported by Gemini AI using this module")
             
             file = genai.upload_file(path)
 
-            response = mod_model_Gemini.generate_content([file, prompt])
+            response = get_response_with_schema(schema, is_list, [file, prompt], timeout) if schema else mod_model_Gemini.generate_content([file, prompt], request_options={"timeout": timeout})
             SetVar(result, response.text)
 
         except Exception as e:
@@ -156,6 +242,15 @@ try:
             path = GetParams("file")
             prompt = GetParams("prompt")
             result = GetParams("result")
+            schema = GetParams("schema")
+            is_list = GetParams("is_list")
+            timeout = int(GetParams("timeout") or "60")
+            
+            if isinstance(is_list, str):
+                is_list = is_list.strip().lower() in ["true", "1", "yes"]
+            else:
+                is_list = bool(is_list)
+
             # if not path.endswith("mp4"):
             #     raise Exception("File format not supported by Gemini AI using this module")
             
@@ -164,8 +259,8 @@ try:
             while file.state.name == "PROCESSING":
                 sleep(5)
                 file = genai.get_file(file.name)
-            print(file)
-            response = mod_model_Gemini.generate_content([file, prompt])
+            #print(file)
+            response = get_response_with_schema(schema, is_list, [file, prompt], timeout) if schema else mod_model_Gemini.generate_content([file, prompt], request_options={"timeout": timeout})
             SetVar(result, response.text)
 
         except Exception as e:
