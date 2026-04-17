@@ -72,7 +72,7 @@ Gere conteúdo fornecendo um prompt com uma rota de arquivo que você deseja
 |Imagem|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
 Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
-Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
+Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Timeout (segundos)|Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos.|60|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
@@ -86,7 +86,7 @@ Gere conteúdo fornecendo um arquivo .txt das informações que deseja
 |Arquivo|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
 Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
-Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
+Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Timeout (segundos)|Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos.|60|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
@@ -100,7 +100,7 @@ Gere conteúdo fornecendo um arquivo .pdf das informações que deseja
 |Arquivo|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
 Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
-Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
+Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Timeout (segundos)|Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos.|60|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
@@ -114,7 +114,7 @@ Gere conteúdo fornecendo um arquivo de audio das informações que deseja
 |Arquivo|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
 Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
-Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
+Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Timeout (segundos)|Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos.|60|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|
@@ -128,7 +128,7 @@ Gerar conteúdo fornecendo um arquivo de vídeo com as informações desejadas
 |Arquivo|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
 Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
-Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "str", "number": "float", "sub_object": {...}}|
+Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marque se deseja que a resposta seja um array de objetos seguindo o esquema fornecido|Checkbox|
 |Timeout (segundos)|Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos.|60|
 |Atribuir resultado à variável|Variável onde o resultado da execução será armazenado|result|

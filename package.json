@@ -328,9 +328,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "en": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
+              "es": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "en": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "pr": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}"
             },
             "description": {
               "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
@@ -483,9 +483,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "en": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
+              "es": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "en": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "pr": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}"
             },
             "description": {
               "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
@@ -639,9 +639,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "en": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
+              "es": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "en": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "pr": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}"
             },
             "description": {
               "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
@@ -794,9 +794,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "en": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
+              "es": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "en": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "pr": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}"
             },
             "description": {
               "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",
@@ -949,9 +949,9 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "en": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}",
-              "pr": "{ \"name\": \"str\", \"number\": \"float\", \"sub_object\": {...}}"
+              "es": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "en": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}",
+              "pr": "{ \"name\": \"string\", \"number\": \"number\", \"sub_object\": {...}}"
             },
             "description": {
               "es": "Formato del contenido generado (opcional). \nLos posibles tipos son: \"string\", \"number\", \"integer\", \"boolean\" y \"array\". \nPara indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.",

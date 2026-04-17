@@ -259,7 +259,7 @@ try:
             while file.state.name == "PROCESSING":
                 sleep(5)
                 file = genai.get_file(file.name)
-            print(file)
+            #print(file)
             response = get_response_with_schema(schema, is_list, [file, prompt], timeout) if schema else mod_model_Gemini.generate_content([file, prompt], request_options={"timeout": timeout})
             SetVar(result, response.text)
 
