@@ -71,7 +71,7 @@ Genera contenido proporcionando una imagen de la ruta de archivo que desees
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Prompt|Texto que se utilizará como prompt para generar el contenido a partir de la imagen|¿Qué puedes ver en la imagen?|
-|Imagen|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
+|Imagen|Archivo que se utilizará como prompt para generar el contenido. Los tipos permitidos son png, jpeg, jpg, webp, bmp, heic y heif.|Selecciona un archivo|
 |Esquema de respuesta (opcional)|Formato del contenido generado (opcional). 
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|

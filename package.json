@@ -8,7 +8,7 @@
     "pr": "Este módulo permite trabalhar com a API de IA do Google Gemini"
 },
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "license": "MIT",
   "homepage": "http://rocketbot.com",
   "linux": true,
@@ -312,9 +312,9 @@
               "pr": "Selecione um arquivo"
             },
             "description": {
-              "es": "Archivo que se utilizará como prompt para generar el contenido",
-              "en": "File that will be used as a prompt to generate the content",
-              "pr": "Arquivo que será usado como prompt para gerar o conteúdo"
+              "es": "Archivo que se utilizará como prompt para generar el contenido. Los tipos permitidos son png, jpeg, jpg, webp, bmp, heic y heif.",
+              "en": "File that will be used as a prompt to generate the content. Allowed types are png, jpeg, jpg, webp, bmp, heic, and heif.",
+              "pr": "Arquivo que será usado como prompt para gerar o conteúdo. Os tipos permitidos são png, jpeg, jpg, webp, bmp, heic e heif."
             },
             "title": {
               "es": "Imagen",
@@ -323,7 +323,7 @@
             },
             "id": "image",
             "css": "col-md-12",
-            "extensions": "png, jpeg, webp, heic, heif"
+            "extensions": "png, jpeg, jpg, webp, bmp, heic, heif"
           },
           {
             "type": "textarea",
