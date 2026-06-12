@@ -25,7 +25,7 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 import PIL.Image
-import os, sys
+import os, sys, platform
 from time import sleep
 
 GetParams = GetParams # type: ignore
@@ -35,9 +35,24 @@ PrintException = PrintException # type: ignore
 base_path = tmp_global_obj["basepath"] # type: ignore
 cur_path = base_path + 'modules' + os.sep + 'Gemini' + os.sep + 'libs' + os.sep
 
+system_name = platform.system().lower()
 
-if cur_path not in sys.path:
-    sys.path.append(cur_path)
+if system_name == "windows":
+    cur_path_platform = os.path.join(cur_path, 'win' + os.sep)
+    if cur_path_platform not in sys.path:
+        sys.path.append(cur_path_platform)
+
+
+elif system_name == "darwin":
+    cur_path_macos = os.path.join(cur_path, 'macos' + os.sep)
+    if cur_path_macos not in sys.path:
+        sys.path.append(cur_path_macos)
+    try:
+        from gemini_mock_classes import load_mock_classes
+        load_mock_classes()
+    except Exception as e:
+        PrintException()
+        raise e 
 
 import google.generativeai as genai # type: ignore
 
