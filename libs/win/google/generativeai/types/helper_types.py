@@ -22,7 +22,7 @@ import collections
 import dataclasses
 
 from typing import Union
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 
 __all__ = ["RequestOptions", "RequestOptionsType"]
 

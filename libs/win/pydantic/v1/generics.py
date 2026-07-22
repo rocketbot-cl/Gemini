@@ -20,7 +20,7 @@ from typing import (
 )
 from weakref import WeakKeyDictionary, WeakValueDictionary
 
-from typing_extensions import Annotated, Literal as ExtLiteral
+from g_typing_extensions import Annotated, Literal as ExtLiteral
 
 from pydantic.v1.class_validators import gather_all_validators
 from pydantic.v1.fields import DeferredType

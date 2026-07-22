@@ -24,7 +24,7 @@ from typing import (
     overload,
 )
 
-from typing_extensions import dataclass_transform
+from g_typing_extensions import dataclass_transform
 
 from pydantic.v1.class_validators import ValidatorGroup, extract_root_validators, extract_validators, inherit_validators
 from pydantic.v1.config import BaseConfig, Extra, inherit_config, prepare_config

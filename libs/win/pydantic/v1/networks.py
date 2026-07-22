@@ -33,7 +33,7 @@ from pydantic.v1.validators import constr_length_validator, str_validator
 
 if TYPE_CHECKING:
     import email_validator
-    from typing_extensions import TypedDict
+    from g_typing_extensions import TypedDict
 
     from pydantic.v1.config import BaseConfig
     from pydantic.v1.fields import ModelField

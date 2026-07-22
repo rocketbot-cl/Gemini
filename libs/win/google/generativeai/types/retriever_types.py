@@ -19,7 +19,7 @@ import re
 import abc
 import dataclasses
 from typing import Any, AsyncIterable, Optional, Union, Iterable, Mapping
-from typing_extensions import deprecated  # type: ignore
+from g_typing_extensions import deprecated  # type: ignore
 
 import google.ai.generativelanguage as glm
 from google.generativeai import protos

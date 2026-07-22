@@ -5,7 +5,7 @@ from copy import deepcopy
 from enum import Enum
 from typing import Any, Tuple
 
-import typing_extensions
+import g_typing_extensions
 
 from .._internal import (
     _model_construction,

@@ -10,7 +10,7 @@ from types import GeneratorType
 from typing import TYPE_CHECKING, Any, Callable, Dict, Type, Union
 from uuid import UUID
 
-from typing_extensions import deprecated
+from g_typing_extensions import deprecated
 
 from .._internal._import_utils import import_cached_base_model
 from ..color import Color

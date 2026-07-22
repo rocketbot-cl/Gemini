@@ -26,7 +26,7 @@ from typing import (
     Union,
 )
 
-from typing_extensions import Annotated, Final
+from g_typing_extensions import Annotated, Final
 
 from pydantic.v1 import errors as errors_
 from pydantic.v1.class_validators import Validator, make_generic_validator, prep_validators

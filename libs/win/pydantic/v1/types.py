@@ -121,7 +121,7 @@ OptionalDate = Optional[date]
 StrIntFloat = Union[str, int, float]
 
 if TYPE_CHECKING:
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic.v1.dataclasses import Dataclass
     from pydantic.v1.main import BaseModel

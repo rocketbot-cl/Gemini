@@ -7,7 +7,7 @@ from types import FunctionType
 from typing import TYPE_CHECKING, Any, Callable, TypeVar, Union, overload
 from warnings import warn
 
-from typing_extensions import Literal, Protocol, TypeAlias, deprecated
+from g_typing_extensions import Literal, Protocol, TypeAlias, deprecated
 
 from .._internal import _decorators, _decorators_v1
 from ..errors import PydanticUserError

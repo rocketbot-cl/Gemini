@@ -18,7 +18,7 @@ import sys
 import abc
 import dataclasses
 from typing import Any, Dict, List
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 
 from google.generativeai import string_utils
 from google.generativeai.types import citation_types

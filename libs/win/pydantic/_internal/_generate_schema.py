@@ -42,7 +42,7 @@ from typing import (
 from uuid import UUID
 from warnings import warn
 
-import typing_extensions
+import g_typing_extensions
 from pydantic_core import (
     CoreSchema,
     MultiHostUrl,
@@ -53,7 +53,7 @@ from pydantic_core import (
     core_schema,
     to_jsonable_python,
 )
-from typing_extensions import Literal, TypeAliasType, TypedDict, get_args, get_origin, is_typeddict
+from g_typing_extensions import Literal, TypeAliasType, TypedDict, get_args, get_origin, is_typeddict
 
 from ..aliases import AliasChoices, AliasGenerator, AliasPath
 from ..annotated_handlers import GetCoreSchemaHandler, GetJsonSchemaHandler

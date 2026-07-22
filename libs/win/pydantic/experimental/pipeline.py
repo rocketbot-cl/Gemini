@@ -14,7 +14,7 @@ from functools import cached_property, partial
 from typing import TYPE_CHECKING, Any, Callable, Generic, Pattern, Protocol, TypeVar, Union, overload
 
 import annotated_types
-from typing_extensions import Annotated
+from g_typing_extensions import Annotated
 
 if TYPE_CHECKING:
     from pydantic_core import core_schema as cs

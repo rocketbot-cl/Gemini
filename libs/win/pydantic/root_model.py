@@ -14,7 +14,7 @@ from .main import BaseModel, _object_setattr
 if typing.TYPE_CHECKING:
     from typing import Any
 
-    from typing_extensions import Literal, Self, dataclass_transform
+    from g_typing_extensions import Literal, Self, dataclass_transform
 
     from .fields import Field as PydanticModelField
     from .fields import PrivateAttr as PydanticModelPrivateAttr

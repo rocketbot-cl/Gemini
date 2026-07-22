@@ -18,7 +18,7 @@ import dataclasses
 from collections.abc import Iterable
 import itertools
 from typing import Any, Iterable, Union, Mapping, Optional
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 
 import google.ai.generativelanguage as glm
 from google.generativeai import protos

@@ -6,7 +6,7 @@ from contextlib import contextmanager
 from functools import cached_property
 from typing import Any, Callable, Iterator, Mapping, NamedTuple, TypeVar
 
-from typing_extensions import ParamSpec, TypeAlias, TypeAliasType, TypeVarTuple
+from g_typing_extensions import ParamSpec, TypeAlias, TypeAliasType, TypeVarTuple
 
 GlobalsNamespace: TypeAlias = 'dict[str, Any]'
 """A global namespace.

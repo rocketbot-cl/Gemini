@@ -15,7 +15,7 @@
 from __future__ import annotations
 from typing import List
 
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 
 from google.generativeai import protos
 from google.generativeai import string_utils

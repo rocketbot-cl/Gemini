@@ -34,7 +34,7 @@ from uuid import UUID
 import annotated_types
 from annotated_types import BaseMetadata, MaxLen, MinLen
 from pydantic_core import CoreSchema, PydanticCustomError, SchemaSerializer, core_schema
-from typing_extensions import Annotated, Literal, Protocol, TypeAlias, TypeAliasType, deprecated
+from g_typing_extensions import Annotated, Literal, Protocol, TypeAlias, TypeAliasType, deprecated
 
 from ._internal import _core_utils, _fields, _internal_dataclass, _typing_extra, _utils, _validators
 from ._migration import getattr_migration
@@ -123,7 +123,7 @@ class Strict(_fields.PydanticMetadata, BaseMetadata):
 
     Example:
         ```python
-        from typing_extensions import Annotated
+        from g_typing_extensions import Annotated
 
         from pydantic.types import Strict
 
@@ -174,7 +174,7 @@ def conint(
 
         === ":white_check_mark: Do this"
             ```python
-            from typing_extensions import Annotated
+            from g_typing_extensions import Annotated
 
             from pydantic import BaseModel, Field
 
@@ -391,7 +391,7 @@ class AllowInfNan(_fields.PydanticMetadata):
 
     Example:
         ```python
-        from typing_extensions import Annotated
+        from g_typing_extensions import Annotated
 
         from pydantic.types import AllowInfNan
 
@@ -434,7 +434,7 @@ def confloat(
 
         === ":white_check_mark: Do this"
             ```python
-            from typing_extensions import Annotated
+            from g_typing_extensions import Annotated
 
             from pydantic import BaseModel, Field
 
@@ -704,7 +704,7 @@ class StringConstraints(annotated_types.GroupedMetadata):
 
     Example:
         ```python
-        from typing_extensions import Annotated
+        from g_typing_extensions import Annotated
 
         from pydantic.types import StringConstraints
 
@@ -771,7 +771,7 @@ def constr(
 
         === ":white_check_mark: Do this"
             ```python
-            from typing_extensions import Annotated
+            from g_typing_extensions import Annotated
 
             from pydantic import BaseModel, StringConstraints
 
@@ -1067,7 +1067,7 @@ def condecimal(
             ```python
             from decimal import Decimal
 
-            from typing_extensions import Annotated
+            from g_typing_extensions import Annotated
 
             from pydantic import BaseModel, Field
 
@@ -1144,7 +1144,7 @@ class UuidVersion:
         ```python
         from uuid import UUID
 
-        from typing_extensions import Annotated
+        from g_typing_extensions import Annotated
 
         from pydantic.types import UuidVersion
 
@@ -1590,7 +1590,7 @@ class Secret(_SecretBase[SecretType]):
     For example:
 
     ```python
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import BaseModel, Field, Secret, ValidationError
 
@@ -2439,7 +2439,7 @@ class EncodedBytes:
     `EncodedBytes` needs an encoder that implements `EncoderProtocol` to operate.
 
     ```python
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import BaseModel, EncodedBytes, EncoderProtocol, ValidationError
 
@@ -2538,7 +2538,7 @@ class EncodedStr:
     `EncodedStr` needs an encoder that implements `EncoderProtocol` to operate.
 
     ```python
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import BaseModel, EncodedStr, EncoderProtocol, ValidationError
 
@@ -2653,7 +2653,7 @@ Warning:
     from typing import Literal
 
     from pydantic_core import PydanticCustomError
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import EncodedBytes, EncoderProtocol
 
@@ -2817,7 +2817,7 @@ class GetPydanticSchema:
     ```python
     from typing import Any
 
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import BaseModel, GetPydanticSchema
 
@@ -2869,7 +2869,7 @@ class Tag:
     ```python
     from typing import Any, Union
 
-    from typing_extensions import Annotated, Literal
+    from g_typing_extensions import Annotated, Literal
 
     from pydantic import BaseModel, Discriminator, Tag
 
@@ -2958,7 +2958,7 @@ class Discriminator:
     ```python
     from typing import Any, Union
 
-    from typing_extensions import Annotated, Literal
+    from g_typing_extensions import Annotated, Literal
 
     from pydantic import BaseModel, Discriminator, Tag
 
@@ -3232,7 +3232,7 @@ class FailFast(_fields.PydanticMetadata, BaseMetadata):
     ```python
     from typing import List
 
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import BaseModel, FailFast, ValidationError
 

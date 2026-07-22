@@ -6,7 +6,7 @@ from pydantic.v1.main import BaseModel, create_model
 from pydantic.v1.typing import is_typeddict, is_typeddict_special
 
 if TYPE_CHECKING:
-    from typing_extensions import TypedDict
+    from g_typing_extensions import TypedDict
 
 if sys.version_info < (3, 11):
 

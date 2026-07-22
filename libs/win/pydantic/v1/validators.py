@@ -45,7 +45,7 @@ from pydantic.v1.typing import (
 from pydantic.v1.utils import almost_equal_floats, lenient_issubclass, sequence_like
 
 if TYPE_CHECKING:
-    from typing_extensions import Literal, TypedDict
+    from g_typing_extensions import Literal, TypedDict
 
     from pydantic.v1.config import BaseConfig
     from pydantic.v1.fields import ModelField

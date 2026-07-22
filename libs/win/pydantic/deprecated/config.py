@@ -3,7 +3,7 @@ from __future__ import annotations as _annotations
 import warnings
 from typing import TYPE_CHECKING, Any
 
-from typing_extensions import Literal, deprecated
+from g_typing_extensions import Literal, deprecated
 
 from .._internal import _config
 from ..warnings import PydanticDeprecatedSince20

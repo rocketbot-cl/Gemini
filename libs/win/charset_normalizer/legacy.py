@@ -8,7 +8,7 @@ from .constant import CHARDET_CORRESPONDENCE
 
 # TODO: remove this check when dropping Python 3.7 support
 if TYPE_CHECKING:
-    from typing_extensions import TypedDict
+    from g_typing_extensions import TypedDict
 
     class ResultDict(TypedDict):
         encoding: str | None

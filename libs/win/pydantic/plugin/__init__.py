@@ -8,7 +8,7 @@ from __future__ import annotations
 from typing import Any, Callable, NamedTuple
 
 from pydantic_core import CoreConfig, CoreSchema, ValidationError
-from typing_extensions import Literal, Protocol, TypeAlias
+from g_typing_extensions import Literal, Protocol, TypeAlias
 
 __all__ = (
     'PydanticPluginProtocol',

@@ -5,7 +5,7 @@ from pydantic.v1.json import pydantic_encoder
 from pydantic.v1.utils import Representation
 
 if TYPE_CHECKING:
-    from typing_extensions import TypedDict
+    from g_typing_extensions import TypedDict
 
     from pydantic.v1.config import BaseConfig
     from pydantic.v1.types import ModelOrDc

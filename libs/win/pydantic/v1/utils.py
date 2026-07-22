@@ -26,7 +26,7 @@ from typing import (
     Union,
 )
 
-from typing_extensions import Annotated
+from g_typing_extensions import Annotated
 
 from pydantic.v1.errors import ConfigError
 from pydantic.v1.typing import (

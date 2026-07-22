@@ -26,7 +26,7 @@ import re
 from typing import Any, Iterable, Union
 
 import urllib.request
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 
 from google.generativeai import protos
 from google.generativeai.types import permission_types

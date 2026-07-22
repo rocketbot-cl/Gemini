@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import datetime
 from typing import Any, Union
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 
 from google.rpc.status_pb2 import Status
 from google.generativeai.client import get_default_file_client

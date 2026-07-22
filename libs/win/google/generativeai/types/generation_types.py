@@ -23,7 +23,7 @@ import json
 import sys
 import textwrap
 from typing import Union, Any
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 import types
 
 import google.protobuf.json_format

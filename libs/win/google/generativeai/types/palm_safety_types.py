@@ -20,7 +20,7 @@ import enum
 import typing
 from typing import Dict, Iterable, List, Union
 
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 
 
 from google.generativeai import protos

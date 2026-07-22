@@ -6,7 +6,7 @@ from inspect import Parameter, signature
 from typing import Any, Dict, Tuple, Union, cast
 
 from pydantic_core import core_schema
-from typing_extensions import Protocol
+from g_typing_extensions import Protocol
 
 from ..errors import PydanticUserError
 from ._utils import can_be_positional

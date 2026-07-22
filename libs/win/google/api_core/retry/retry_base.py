@@ -38,7 +38,7 @@ if TYPE_CHECKING:
     if sys.version_info >= (3, 11):
         from typing import Self
     else:
-        from typing_extensions import Self
+        from g_typing_extensions import Self
 
 _DEFAULT_INITIAL_DELAY = 1.0  # seconds
 _DEFAULT_MAXIMUM_DELAY = 60.0  # seconds

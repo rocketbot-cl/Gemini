@@ -10,7 +10,7 @@ from inspect import Parameter, ismethoddescriptor, signature
 from typing import TYPE_CHECKING, Any, Callable, Pattern
 
 from pydantic_core import PydanticUndefined
-from typing_extensions import TypeIs
+from g_typing_extensions import TypeIs
 
 from pydantic.errors import PydanticUserError
 

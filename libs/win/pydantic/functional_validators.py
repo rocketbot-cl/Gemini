@@ -10,14 +10,14 @@ from typing import TYPE_CHECKING, Any, Callable, TypeVar, Union, cast, overload
 
 from pydantic_core import PydanticUndefined, core_schema
 from pydantic_core import core_schema as _core_schema
-from typing_extensions import Annotated, Literal, Self, TypeAlias
+from g_typing_extensions import Annotated, Literal, Self, TypeAlias
 
 from ._internal import _decorators, _generics, _internal_dataclass
 from .annotated_handlers import GetCoreSchemaHandler
 from .errors import PydanticUserError
 
 if sys.version_info < (3, 11):
-    from typing_extensions import Protocol
+    from g_typing_extensions import Protocol
 else:
     from typing import Protocol
 
@@ -35,7 +35,7 @@ class AfterValidator:
 
     Example:
         ```python
-        from typing_extensions import Annotated
+        from g_typing_extensions import Annotated
 
         from pydantic import AfterValidator, BaseModel, ValidationError
 
@@ -97,7 +97,7 @@ class BeforeValidator:
 
     Example:
         ```python
-        from typing_extensions import Annotated
+        from g_typing_extensions import Annotated
 
         from pydantic import BaseModel, BeforeValidator
 
@@ -171,7 +171,7 @@ class PlainValidator:
         ```python
         from typing import Union
 
-        from typing_extensions import Annotated
+        from g_typing_extensions import Annotated
 
         from pydantic import BaseModel, PlainValidator
 
@@ -263,7 +263,7 @@ class WrapValidator:
     ```python
     from datetime import datetime
 
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import BaseModel, ValidationError, WrapValidator
 
@@ -674,7 +674,7 @@ def model_validator(
 
     Example usage:
     ```python
-    from typing_extensions import Self
+    from g_typing_extensions import Self
 
     from pydantic import BaseModel, ValidationError, model_validator
 

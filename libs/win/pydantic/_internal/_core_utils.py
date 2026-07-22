@@ -6,7 +6,7 @@ from typing import Any, Callable, Hashable, TypeVar, Union
 
 from pydantic_core import CoreSchema, core_schema
 from pydantic_core import validate_core_schema as _validate_core_schema
-from typing_extensions import TypeGuard, get_args, get_origin
+from g_typing_extensions import TypeGuard, get_args, get_origin
 
 from ..errors import PydanticUserError
 from . import _repr

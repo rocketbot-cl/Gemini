@@ -14,7 +14,7 @@ from types import FunctionType
 from typing import Any, Callable, Generic, Literal, NoReturn, TypeVar, cast
 
 from pydantic_core import PydanticUndefined, SchemaSerializer
-from typing_extensions import TypeAliasType, dataclass_transform, deprecated, get_args
+from g_typing_extensions import TypeAliasType, dataclass_transform, deprecated, get_args
 
 from ..errors import PydanticUndefinedAnnotation, PydanticUserError
 from ..plugin._schema_validator import create_schema_validator

@@ -6,7 +6,7 @@ import types
 import typing
 from typing import Any
 
-import typing_extensions
+import g_typing_extensions
 
 from . import _typing_extra
 

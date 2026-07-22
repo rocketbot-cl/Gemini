@@ -11,8 +11,8 @@ import warnings
 from functools import lru_cache, partial
 from typing import TYPE_CHECKING, Any, Callable
 
-import typing_extensions
-from typing_extensions import TypeIs, deprecated, get_args, get_origin
+import g_typing_extensions
+from g_typing_extensions import TypeIs, deprecated, get_args, get_origin
 
 from ._namespace_utils import GlobalsNamespace, MappingNamespace, NsResolver, get_module_ns_of
 

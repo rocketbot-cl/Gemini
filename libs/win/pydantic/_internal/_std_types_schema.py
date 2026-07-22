@@ -16,13 +16,13 @@ import typing
 from functools import partial
 from typing import Any, Callable, Iterable, Tuple, TypeVar, cast
 
-import typing_extensions
+import g_typing_extensions
 from pydantic_core import (
     CoreSchema,
     PydanticCustomError,
     core_schema,
 )
-from typing_extensions import get_args, get_origin
+from g_typing_extensions import get_args, get_origin
 
 from pydantic._internal._serializers import serialize_sequence_via_list
 from pydantic.errors import PydanticSchemaGenerationError

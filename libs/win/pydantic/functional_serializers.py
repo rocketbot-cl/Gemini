@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING, Any, Callable, TypeVar, overload
 
 from pydantic_core import PydanticUndefined, core_schema
 from pydantic_core.core_schema import SerializationInfo, SerializerFunctionWrapHandler, WhenUsed
-from typing_extensions import Annotated, Literal, TypeAlias
+from g_typing_extensions import Annotated, Literal, TypeAlias
 
 from . import PydanticUndefinedAnnotation
 from ._internal import _decorators, _internal_dataclass
@@ -25,7 +25,7 @@ class PlainSerializer:
     ```python
     from typing import List
 
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import BaseModel, PlainSerializer
 
@@ -95,7 +95,7 @@ class WrapSerializer:
     from datetime import datetime, timezone
     from typing import Any, Dict
 
-    from typing_extensions import Annotated
+    from g_typing_extensions import Annotated
 
     from pydantic import BaseModel, WrapSerializer
 

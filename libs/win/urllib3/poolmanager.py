@@ -27,7 +27,7 @@ from .util.url import Url, parse_url
 if typing.TYPE_CHECKING:
     import ssl
 
-    from typing_extensions import Self
+    from g_typing_extensions import Self
 
 __all__ = ["PoolManager", "ProxyManager", "proxy_from_url"]
 

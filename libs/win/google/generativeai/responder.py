@@ -18,7 +18,7 @@ from collections.abc import Iterable, Mapping, Sequence
 import inspect
 import typing
 from typing import Any, Callable, Union
-from typing_extensions import TypedDict
+from g_typing_extensions import TypedDict
 
 import pydantic
 

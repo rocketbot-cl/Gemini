@@ -12,20 +12,20 @@ from datetime import date, datetime, time, timedelta
 from decimal import Decimal
 from typing import TYPE_CHECKING, Any, Callable, Dict, Hashable, List, Pattern, Set, Tuple, Type, Union
 
-from typing_extensions import deprecated
+from g_typing_extensions import deprecated
 
 if sys.version_info < (3, 12):
-    from typing_extensions import TypedDict
+    from g_typing_extensions import TypedDict
 else:
     from typing import TypedDict
 
 if sys.version_info < (3, 11):
-    from typing_extensions import Protocol, Required, TypeAlias
+    from g_typing_extensions import Protocol, Required, TypeAlias
 else:
     from typing import Protocol, Required, TypeAlias
 
 if sys.version_info < (3, 9):
-    from typing_extensions import Literal
+    from g_typing_extensions import Literal
 else:
     from typing import Literal
 
@@ -2917,7 +2917,7 @@ def typed_dict_schema(
     Returns a schema that matches a typed dict, e.g.:
 
     ```py
-    from typing_extensions import TypedDict
+    from g_typing_extensions import TypedDict
 
     from pydantic_core import SchemaValidator, core_schema
 

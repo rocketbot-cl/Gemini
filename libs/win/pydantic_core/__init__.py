@@ -30,12 +30,12 @@ from ._pydantic_core import (
 from .core_schema import CoreConfig, CoreSchema, CoreSchemaType, ErrorType
 
 if _sys.version_info < (3, 11):
-    from typing_extensions import NotRequired as _NotRequired
+    from g_typing_extensions import NotRequired as _NotRequired
 else:
     from typing import NotRequired as _NotRequired
 
 if _sys.version_info < (3, 12):
-    from typing_extensions import TypedDict as _TypedDict
+    from g_typing_extensions import TypedDict as _TypedDict
 else:
     from typing import TypedDict as _TypedDict
 

@@ -45,7 +45,7 @@ except ImportError:
 
 from typing import TYPE_CHECKING, Any, Callable, ClassVar, Dict, Generator, Optional, Type, TypeVar, Union, overload
 
-from typing_extensions import dataclass_transform
+from g_typing_extensions import dataclass_transform
 
 from pydantic.v1.class_validators import gather_all_validators
 from pydantic.v1.config import BaseConfig, ConfigDict, Extra, get_config

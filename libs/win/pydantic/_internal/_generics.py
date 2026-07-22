@@ -10,7 +10,7 @@ from types import prepare_class
 from typing import TYPE_CHECKING, Any, Iterator, Mapping, MutableMapping, Tuple, TypeVar
 from weakref import WeakValueDictionary
 
-import typing_extensions
+import g_typing_extensions
 
 from . import _typing_extra
 from ._core_utils import get_type_ref

@@ -29,7 +29,7 @@ from typing import (
 )
 from uuid import UUID
 
-from typing_extensions import Annotated, Literal
+from g_typing_extensions import Annotated, Literal
 
 from pydantic.v1.fields import (
     MAPPING_LIKE_SHAPES,

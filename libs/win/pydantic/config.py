@@ -5,7 +5,7 @@ from __future__ import annotations as _annotations
 from re import Pattern
 from typing import TYPE_CHECKING, Any, Callable, Dict, List, Type, TypeVar, Union
 
-from typing_extensions import Literal, TypeAlias, TypedDict
+from g_typing_extensions import Literal, TypeAlias, TypedDict
 
 from ._migration import getattr_migration
 from .aliases import AliasGenerator
@@ -1014,7 +1014,7 @@ def with_config(config: ConfigDict) -> Callable[[_TypeT], _TypeT]:
     !!! example "Usage"
 
         ```python
-        from typing_extensions import TypedDict
+        from g_typing_extensions import TypedDict
 
         from pydantic import ConfigDict, TypeAdapter, with_config
 

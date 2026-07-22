@@ -13,7 +13,7 @@ from typing import TYPE_CHECKING, Any, ClassVar
 from pydantic_core import MultiHostHost, PydanticCustomError, SchemaSerializer, core_schema
 from pydantic_core import MultiHostUrl as _CoreMultiHostUrl
 from pydantic_core import Url as _CoreUrl
-from typing_extensions import Annotated, Self, TypeAlias
+from g_typing_extensions import Annotated, Self, TypeAlias
 
 from pydantic.errors import PydanticUserError
 

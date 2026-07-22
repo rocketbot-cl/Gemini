@@ -27,9 +27,9 @@ from typing import (
 )
 
 import pydantic_core
-import typing_extensions
+import g_typing_extensions
 from pydantic_core import PydanticUndefined
-from typing_extensions import Self, TypeAlias, Unpack
+from g_typing_extensions import Self, TypeAlias, Unpack
 
 from ._internal import (
     _config,
