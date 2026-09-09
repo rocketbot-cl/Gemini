@@ -69,7 +69,7 @@ Gere conteúdo fornecendo um prompt com uma rota de arquivo que você deseja
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Prompt|Texto que será usado como prompt para gerar o conteúdo desde à imagem|O que é você pode olhar na imagem?|
-|Imagem|Arquivo que será usado como prompt para gerar o conteúdo. Os tipos permitidos são png, jpeg, jpg, webp, bmp, heic e heif.|Selecione um arquivo|
+|Imagem|Arquivo que será usado como prompt para gerar o conteúdo|Selecione um arquivo|
 |Esquema de resposta (opcional)|Formato do conteúdo gerado (opcional). 
 Os tipos possíveis são "string", "number", "integer", "boolean" e "array". 
 Para indicar um objeto aninhado, você pode usar outro dicionário com a mesma estrutura.|{ "name": "string", "number": "number", "sub_object": {...}}|

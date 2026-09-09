@@ -69,7 +69,7 @@ Generate content by providing a prompt with a file route you want
 |Parameters|Description|example|
 | --- | --- | --- |
 |Prompt|Text that will be used as a prompt to generate the content from the image|What can you see in the image?|
-|Image|File that will be used as a prompt to generate the content. Allowed types are png, jpeg, jpg, webp, bmp, heic, and heif.|Select a file|
+|Image|File that will be used as a prompt to generate the content|Select a file|
 |Response schema (optional)|Format of the generated content (optional). 
 The possible types are "string", "number", "integer", "boolean" and "array". 
 To indicate a nested object, you can use another dictionary with the same structure.|{ "name": "string", "number": "number", "sub_object": {...}}|
