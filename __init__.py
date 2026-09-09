@@ -148,7 +148,7 @@ try:
             else:
                 is_list = bool(is_list)
 
-            if not path.endswith((".png", ".jpeg", ".webp",".heic", ".heif")):
+            if not path.endswith((".png", ".jpeg", ".jpg", ".webp",".heic", ".heif", ".bmp")):
                 raise Exception("File format not supported by Gemini AI using this module")
                 
             file_image = PIL.Image.open(path)
