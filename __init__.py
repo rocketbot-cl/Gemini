@@ -25,7 +25,7 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 """
 import PIL.Image
-import os, sys, platform
+import os, sys
 from time import sleep
 
 GetParams = GetParams # type: ignore
@@ -35,46 +35,12 @@ PrintException = PrintException # type: ignore
 base_path = tmp_global_obj["basepath"] # type: ignore
 cur_path = base_path + 'modules' + os.sep + 'Gemini' + os.sep + 'libs' + os.sep
 
-system_name = platform.system().lower()
 
-if system_name == "windows":
-    cur_path_platform = os.path.join(cur_path, 'win' + os.sep)
-    if cur_path_platform in sys.path:
-        sys.path.remove(cur_path_platform)
-    sys.path.insert(0, cur_path_platform)
+if cur_path not in sys.path:
+    sys.path.append(cur_path)
 
-
-elif system_name == "darwin":
-    cur_path_macos = os.path.join(cur_path, 'macos' + os.sep)
-    if cur_path_macos in sys.path:
-        sys.path.remove(cur_path_macos)
-    sys.path.insert(0, cur_path_macos)
-    try:
-        from gemini_mock_classes import load_mock_classes
-        load_mock_classes()
-    except Exception as e:
-        PrintException()
-        raise e 
-
-import g_typing_extensions
-
-if not hasattr(g_typing_extensions, "Sentinel"):
-    class _CompatSentinel:
-        def __new__(cls, name, /, *, module=None):
-            obj = super().__new__(cls)
-            obj._name = name
-            obj._module = module
-            return obj
-
-        def __repr__(self):
-            return self._name
-
-    g_typing_extensions.Sentinel = _CompatSentinel
-    if hasattr(g_typing_extensions, "__all__") and "Sentinel" not in g_typing_extensions.__all__:
-        g_typing_extensions.__all__.append("Sentinel")
-
-sys.modules["typing_extensions"] = g_typing_extensions
 import google.generativeai as genai # type: ignore
+
 global mod_model_Gemini
 
 
@@ -97,7 +63,7 @@ gemini_schema_mapper = {
 }
 
 def parse_into_gemini_schema(schema, class_name="Schema"):
-    
+    import typing_extensions
     parsed_schema = {}
 
     for key, value in schema.items():
@@ -107,7 +73,7 @@ def parse_into_gemini_schema(schema, class_name="Schema"):
         else:
             parsed_schema[key] = gemini_schema_mapper.get(value.strip().lower(), str)
 
-    return g_typing_extensions.TypedDict(class_name, parsed_schema)
+    return typing_extensions.TypedDict(class_name, parsed_schema)
 
 
 
@@ -182,7 +148,7 @@ try:
             else:
                 is_list = bool(is_list)
 
-            if not path.endswith((".png", ".jpeg", ".jpg", ".webp",".heic", ".heif", ".bmp")):
+            if not path.endswith((".png", ".jpeg", ".webp",".heic", ".heif")):
                 raise Exception("File format not supported by Gemini AI using this module")
                 
             file_image = PIL.Image.open(path)
