@@ -47,7 +47,7 @@ Conecte-se à API do Google Gemini
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Chave da API|Chave da API|AIza....|
-|Modelo|Modelo Gemini a usar|gemini-2.0-flash|
+|Modelo|Modelo Gemini a usar|gemini-3.6-flash|
 |Atribuir resultado à variável|Variável onde o modelo Gemini será armazenado|resul|
 
 ### Gerar Conteúdo

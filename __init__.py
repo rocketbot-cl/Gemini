@@ -95,12 +95,12 @@ try:
         try:
             api_key = GetParams("api_key")
             result = GetParams("result") 
-            model_name = GetParams("model_name") or "gemini-2.0-flash"
+            model_name = GetParams("model_name") or "gemini-3.6-flash"
 
             genai.configure(api_key=api_key)
             # get_model = genai.get_model("models/gemini-1.5-flash-latest")  # Modelo retirado
             # mod_model_Gemini = genai.GenerativeModel("gemini-1.5-flash")    # Modelo retirado
-            #mod_model_Gemini = genai.GenerativeModel("gemini-2.0-flash")  # Actualización
+            #mod_model_Gemini = genai.GenerativeModel("gemini-3.6-flash")  # Actualización
             mod_model_Gemini = genai.GenerativeModel(model_name)
             
             SetVar(result, True)
@@ -148,7 +148,7 @@ try:
             else:
                 is_list = bool(is_list)
 
-            if not path.endswith((".png", ".jpeg", ".webp",".heic", ".heif")):
+            if not path.endswith((".png", ".jpeg", ".jpg", ".webp",".heic", ".heif", ".bmp")):
                 raise Exception("File format not supported by Gemini AI using this module")
                 
             file_image = PIL.Image.open(path)
