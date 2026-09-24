@@ -208,14 +208,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "60",
-              "en": "60",
-              "pr": "60"
+              "es": "300",
+              "en": "300",
+              "pr": "300"
             },
             "description": {
-              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
-              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
-              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 300 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 300 segundos."
             },
             "title": {
               "es": "Timeout (segundos)",
@@ -364,14 +364,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "60",
-              "en": "60",
-              "pr": "60"
+              "es": "300",
+              "en": "300",
+              "pr": "300"
             },
             "description": {
-              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
-              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
-              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 300 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 300 segundos."
             },
             "title": {
               "es": "Timeout (segundos)",
@@ -519,14 +519,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "60",
-              "en": "60",
-              "pr": "60"
+              "es": "300",
+              "en": "300",
+              "pr": "300"
             },
             "description": {
-              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
-              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
-              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 300 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 300 segundos."
             },
             "title": {
               "es": "Timeout (segundos)",
@@ -675,14 +675,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "60",
-              "en": "60",
-              "pr": "60"
+              "es": "300",
+              "en": "300",
+              "pr": "300"
             },
             "description": {
-              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
-              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
-              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 300 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 300 segundos."
             },
             "title": {
               "es": "Timeout (segundos)",
@@ -830,14 +830,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "60",
-              "en": "60",
-              "pr": "60"
+              "es": "300",
+              "en": "300",
+              "pr": "300"
             },
             "description": {
-              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
-              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
-              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 300 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 300 segundos."
             },
             "title": {
               "es": "Timeout (segundos)",
@@ -909,8 +909,8 @@
           {
             "type": "textarea",
             "placeholder": {
-              "es": "¿Qué  contiene el video?",
-              "en": "What the video containso?",
+              "es": "¿Qué contiene el video?",
+              "en": "What does the video contain?",
               "pr": "O que o vídeo contém?"
             },
             "description": {
@@ -985,14 +985,14 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "60",
-              "en": "60",
-              "pr": "60"
+              "es": "300",
+              "en": "300",
+              "pr": "300"
             },
             "description": {
-              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.",
-              "en": "Maximum time in seconds to wait for the Gemini response. Default is 60 seconds.",
-              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 60 segundos."
+              "es": "Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.",
+              "en": "Maximum time in seconds to wait for the Gemini response. Default is 300 seconds.",
+              "pr": "Tempo máximo em segundos que será esperado pela resposta do Gemini. Por padrão são 300 segundos."
             },
             "title": {
               "es": "Timeout (segundos)",

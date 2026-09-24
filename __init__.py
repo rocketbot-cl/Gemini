@@ -119,7 +119,7 @@ try:
             schema = GetParams("schema")
             is_list = GetParams("is_list")
             result = GetParams("result")
-            timeout = int(GetParams("timeout") or "60")
+            timeout = int(GetParams("timeout") or "300")
             
             if isinstance(is_list, str):
                 is_list = is_list.strip().lower() in ["true", "1", "yes"]
@@ -141,7 +141,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout") or "60")
+            timeout = int(GetParams("timeout") or "300")
 
             if isinstance(is_list, str):
                 is_list = is_list.strip().lower() in ["true", "1", "yes"]
@@ -167,7 +167,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout") or "60")
+            timeout = int(GetParams("timeout") or "300")
 
             if isinstance(is_list, str):
                 is_list = is_list.strip().lower() in ["true", "1", "yes"]
@@ -191,7 +191,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout") or "60")
+            timeout = int(GetParams("timeout") or "300")
 
             if isinstance(is_list, str):
                 is_list = is_list.strip().lower() in ["true", "1", "yes"]
@@ -217,7 +217,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout") or "60")
+            timeout = int(GetParams("timeout") or "300")
 
             if isinstance(is_list, str):
                 is_list = is_list.strip().lower() in ["true", "1", "yes"]
@@ -244,7 +244,7 @@ try:
             result = GetParams("result")
             schema = GetParams("schema")
             is_list = GetParams("is_list")
-            timeout = int(GetParams("timeout") or "60")
+            timeout = int(GetParams("timeout") or "300")
             
             if isinstance(is_list, str):
                 is_list = is_list.strip().lower() in ["true", "1", "yes"]
