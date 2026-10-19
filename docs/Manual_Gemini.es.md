@@ -62,7 +62,7 @@ Genera contenido proporcionando un prompt de la información que deseas
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
-|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.|300|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Leer Imagen
@@ -76,7 +76,7 @@ Genera contenido proporcionando una imagen de la ruta de archivo que desees
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
-|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.|300|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Generar Contenido Desde txt
@@ -90,7 +90,7 @@ Genera contenido proporcionando un archivo .txt de la información que deseas
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
-|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.|300|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Generar Contenido Desde pdf
@@ -104,7 +104,7 @@ Genera contenido proporcionando un archivo .pdf de la información que deseas
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
-|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.|300|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Generar Contenido Desde Audio
@@ -118,7 +118,7 @@ Genera contenido proporcionando un archivo de audio de la información que desea
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
-|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.|300|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
 
 ### Generar Contenido Desde Video
@@ -126,11 +126,11 @@ Para indicar un objeto anidado, se puede usar otro diccionario con la misma estr
 Genera contenido proporcionando un archivo de video de la información que deseas
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
-|Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué  contiene el video?|
+|Prompt|Texto que se utilizará como prompt para generar el contenido|¿Qué contiene el video?|
 |Archivo|Archivo que se utilizará como prompt para generar el contenido|Selecciona un archivo|
 |Esquema de respuesta (opcional)|Formato del contenido generado (opcional). 
 Los posibles tipos son "string", "number", "integer", "boolean" y "array". 
 Para indicar un objeto anidado, se puede usar otro diccionario con la misma estructura.|{ "name": "string", "number": "number", "sub_object": {...}}|
 |Devolver lista de elementos|Marcar si se quiere que la respuesta sea un arreglo de objetos siguiendo el esquema dado|Checkbox|
-|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 60 segundos.|60|
+|Timeout (segundos)|Tiempo máximo en segundos que se esperará por la respuesta de Gemini. Por default son 300 segundos.|300|
 |Asignar resultado a variable|Variable donde se almacenará el resultado de la ejecución|result|
